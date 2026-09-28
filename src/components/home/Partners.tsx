@@ -1,20 +1,21 @@
+import Image from "next/image";
 import { partners } from "@/content/site";
+import { img } from "@/lib/img";
 import s from "./Partners.module.css";
 
-// Безкрайна лента с производителите от сегашния сайт; спира при посочване. Имената са изписани
-// типографски, за да изглеждат еднакво (оригиналните логота са растерни и с различен фон).
+// Безкрайна лента с логата на партньорите от сегашния сайт; спира при посочване.
 export function Partners() {
   const row = (hidden: boolean) => (
     <ul className={s.row} aria-hidden={hidden || undefined}>
-      {partners.map((name) => (
-        <li key={name} className={s.item}>
-          <span className={s.name}>{name}</span>
+      {partners.map((p) => (
+        <li key={p.name} className={s.item}>
+          <Image src={img(p.logo)} alt={hidden ? "" : p.name} sizes="200px" className={s.logo} />
         </li>
       ))}
     </ul>
   );
   return (
-    <div className={s.marquee} role="region" aria-label="Производители, с които работим">
+    <div className={s.marquee} role="region" aria-label="Партньори">
       <div className={s.track}>
         {row(false)}
         {row(true)}

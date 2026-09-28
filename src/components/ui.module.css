@@ -126,7 +126,7 @@
 }
 
 .ctaTitle {
-  font-size: var(--fs-hero);
+  font-size: clamp(1.8rem, 7.4vw, 7.4rem);
   max-width: 14ch;
   margin-block: 28px clamp(32px, 5vw, 64px);
 }

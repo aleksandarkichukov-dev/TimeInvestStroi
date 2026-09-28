@@ -32,22 +32,23 @@ export const site = {
   group: { name: "Timeinvest", url: "https://timeinvest.eu/" },
 };
 
+// Логата на партньорите от сегашния сайт, в същия ред (файловете са в media-src/partners/).
 export const partners = [
   "Ytong",
   "Weber",
+  "Vidima",
   "Velux",
+  "Titan",
+  "Orgachim",
   "Makita",
   "Knauf",
   "Hilti",
   "Ceresit",
-  "Bosch",
-  "Bramac",
-  "Henkel",
-  "Titan",
-  "Orgachim",
-  "Vidima",
   "Formavita",
-];
+  "Henkel",
+  "Bramac",
+  "Bosch",
+].map((name) => ({ name, logo: `/img/partners/${name.toLowerCase()}.webp` }));
 
 export const nav = [
   { href: "/uslugi", label: "Услуги" },
