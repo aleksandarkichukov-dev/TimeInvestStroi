@@ -4,6 +4,11 @@
   "h": 768,
   "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAwAA4BaJYgCdAD2O+7VhBgAAP7mmM+Zm9tzs3FBNtTBhaGevHcf9A9E6eNf+vqK5Yj3OyzhSlSrswyAwdikkGom/DwYeNQeIAAA"
  },
+ "/img/misc/hero-lake-house.webp": {
+  "w": 1648,
+  "h": 940,
+  "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAQCdASoQAAkAA4BaJZgCdADdM75QAP7mAyDYmHm3T7LpI26ig8mVSoCFZRHlu+KWsbkPv4qdr1AEvHRYAiNzjJ05q5qgo33PZuFXyKBhDzmV1HYAAA=="
+ },
  "/img/misc/kamara-na-stroitelite.webp": {
   "w": 600,
   "h": 594,
@@ -1128,11 +1133,6 @@
   "w": 1024,
   "h": 768,
   "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAwAA4BaJbACdAYtystfbgAA/uPhgj+3F8ij8sxC8dGemjYZLrht1lSmZfJjPg7s325ZWHcOi/ZHdf7pt5BpM9nKjZT0eXqPrJhijeJ3YFf3AAA="
- },
- "/img/projects/lake-house/029.webp": {
-  "w": 2000,
-  "h": 1500,
-  "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAwAA4BaJagCdGuAAjn0AAD+lIZYtwo9540/y6uxvu0+uHzJN7otk8UxgNwhSlRe83gufBkvFh8StekjoAAA"
  },
  "/img/projects/lake-house/030.webp": {
   "w": 2000,

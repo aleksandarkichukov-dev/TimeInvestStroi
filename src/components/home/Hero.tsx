@@ -12,7 +12,7 @@ import { Magnetic } from "@/components/motion/Magnetic";
 import { HeroDrawing } from "./HeroDrawing";
 import s from "./Hero.module.css";
 
-const PHOTO = "/img/projects/lake-house/029.webp";
+const PHOTO = "/img/misc/hero-lake-house.webp";
 const PHASES = ["Чертеж", "Строеж", "Готово"];
 
 export function Hero() {
