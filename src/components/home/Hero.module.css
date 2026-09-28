@@ -86,6 +86,19 @@
     20px 20px;
 }
 
+/* Рамка с пропорциите на снимката (4:3), вписана в полето. */
+.stage {
+  container-type: size;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: min(100cqw, 100cqh * 4 / 3);
+  height: min(100cqh, 100cqw * 3 / 4);
+}
+
 .photo {
   position: absolute;
   inset: 0;

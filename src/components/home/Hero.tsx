@@ -12,7 +12,7 @@ import { Magnetic } from "@/components/motion/Magnetic";
 import { HeroDrawing } from "./HeroDrawing";
 import s from "./Hero.module.css";
 
-const PHOTO = "/img/projects/lake-house/029.webp";
+const PHOTO = "/img/projects/lake-house/005.webp";
 const PHASES = ["Чертеж", "Строеж", "Готово"];
 
 export function Hero() {
@@ -108,11 +108,20 @@ export function Hero() {
 
         <div className={`container ${s.stageWrap}`}>
           <div className={s.stage}>
-            <div className={s.photo} data-photo>
-              <Image src={img(PHOTO)} alt="Лейк хаус" fill sizes="100vw" quality={75} className={s.img} />
-            </div>
-            <div className={s.drawing}>
-              <HeroDrawing />
+            {/* Снимката се показва цялата (4:3), в средата на „чертожния лист“. */}
+            <div className={s.frame}>
+              <div className={s.photo} data-photo>
+                <Image src={img(PHOTO)} alt="Лейк хаус" fill sizes="(min-width: 900px) 70vw, 100vw" quality={85} className={s.img} />
+              </div>
+              <div className={s.drawing}>
+                <HeroDrawing />
+              </div>
+              <Link href="/proekti/lake-house" className={s.caption} data-caption data-cursor="Виж">
+                <span className="mono">Проект</span>
+                <span className={s.captionTitle}>
+                  Лейк хаус <ArrowRight width={22} height={22} />
+                </span>
+              </Link>
             </div>
             <span className={`${s.tick} ${s.tl}`} />
             <span className={`${s.tick} ${s.tr}`} />
@@ -131,13 +140,6 @@ export function Hero() {
                 </dd>
               </div>
             </dl>
-
-            <Link href="/proekti/lake-house" className={s.caption} data-caption data-cursor="Виж">
-              <span className="mono">Проект</span>
-              <span className={s.captionTitle}>
-                Лейк хаус <ArrowRight width={22} height={22} />
-              </span>
-            </Link>
 
             <span className={`mono ${s.hint}`} data-hint>
               Скролирай <ArrowDown width={14} height={14} />

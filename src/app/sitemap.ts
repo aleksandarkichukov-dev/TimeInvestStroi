@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   return [
-    page("", 1, ["/img/projects/lake-house/029.webp"]),
+    page("", 1, ["/img/projects/lake-house/005.webp"]),
     page("/uslugi", 0.9),
     page("/proekti", 0.9),
     page("/za-nas", 0.7),

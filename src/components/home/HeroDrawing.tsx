@@ -1,96 +1,95 @@
-// Линейна фасада на „Лейк хаус“, начертана в координатите на снимката
-// /img/projects/lake-house/029.webp (2048 × 1536). SVG-то и снимката се мащабират по един и същи
-// начин (slice / cover, центрирани), затова линиите легнат точно върху сградата.
+// Линейна фасада на „Лейк хаус“, начертана в координатите на цялата снимка
+// /img/projects/lake-house/005.webp (в мащаб 2048 × 1536). Снимката се показва цялата (4:3),
+// а SVG-то е със същите пропорции, затова линиите легнат точно върху сградата.
 
 const building = [
-  // горен ляв обем
-  "M378 423 H772 L820 530",
-  "M382 455 H760",
-  "M400 455 V533",
-  "M450 500 H715 V533 M450 500 V533 M585 500 V533",
-  "M760 457 V600",
-  // конзолна плоча над партера
-  "M82 532 H680 L815 680",
-  "M82 532 V582 H672 L800 712",
-  // ляв партерен обем
-  "M140 582 V942 H665 V582",
-  "M218 621 H600 V838 H218 Z",
-  "M410 621 V838",
+  // десен горен обем
+  "M1377 364 L1828 259 L1879 433",
+  "M1377 364 L1377 553",
+  "M1377 395 L1823 297",
+  "M1444 433 L1753 376 L1753 544 L1444 553 Z",
+  "M1597 405 L1597 546",
   // среден обем
-  "M805 530 H1105 M805 555 H1105",
-  "M815 675 H1105 M815 700 H1105",
-  "M830 585 H950 V675 M975 585 H1085 V675 M905 585 V675 M1045 585 V675",
-  "M810 530 V822",
-  "M890 715 H1065 V822 M978 715 V822",
-  // десен обем
-  "M1105 487 H1412 L1410 510 H1110 Z",
-  "M1115 510 V655 M1405 510 V655",
-  "M1158 555 H1370 V655 H1158 Z M1262 555 V655",
-  "M1100 655 H1415 V700 H1100 Z",
-  "M1110 700 V822 M1132 700 V822 M1335 700 V822 M1368 700 V822",
-  "M1150 715 H1280 V822 M1215 715 V822",
-  "M1370 705 H1460 V822",
-  // тераса и стълби
-  "M600 822 H1570",
-  "M650 842 H925 M635 862 H925 M620 882 H925 M605 902 H925 M598 922 H925",
-  "M930 822 V940 M930 880 H1640",
-  "M1570 822 H1800 M1600 842 H1850 M1630 862 H1890 M1650 882 H1920 M1670 902 H1950 M1690 922 H1965",
+  "M1137 468 L1393 420",
+  "M1157 507 L1382 487 L1382 599 L1157 608 Z",
+  // ляв горен обем
+  "M773 468 L988 418 L1142 468",
+  "M788 471 L788 604",
+  "M988 418 L988 615",
+  "M891 507 L1106 526 L1106 615 L891 608",
+  // стъклен парапет
+  "M620 553 L788 538",
+  "M604 601 L620 553",
+  // плоча между етажите
+  "M604 601 L1137 618 L1377 591 L1884 553",
+  "M604 630 L1137 642 L1382 615 L1884 581",
+  // партер
+  "M625 651 L625 782",
+  "M645 642 L778 642 L778 782",
+  "M1213 651 L1372 651 L1372 775",
+  "M1597 630 L1741 630 L1741 773",
+  "M604 782 L1782 775",
+  // стълби
+  "M840 789 L988 789 M809 809 L988 809 M778 830 L988 830 M748 850 L988 850",
+  "M1638 799 L2048 799 M1633 825 L2048 825 M1628 855 L2048 855 M1623 886 L2048 886 M1618 917 L2048 917",
 ];
 
 const axes = [
-  { x: 140, label: "А" },
-  { x: 665, label: "Б" },
-  { x: 1105, label: "В" },
-  { x: 1412, label: "Г" },
+  { x: 604, label: "А" },
+  { x: 988, label: "Б" },
+  { x: 1377, label: "В" },
+  { x: 1879, label: "Г" },
 ];
+
+const GROUND = 866;
 
 export function HeroDrawing() {
   return (
-    <svg viewBox="0 0 2048 1536" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-drawing>
-      <g data-axes fill="none" stroke="currentColor" strokeWidth="1.4" strokeDasharray="14 10" opacity="0.45">
+    <svg viewBox="0 0 2048 1536" aria-hidden="true" data-drawing>
+      <g data-axes fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="18 12" opacity="0.45">
         {axes.map((a) => (
-          <path key={a.x} d={`M${a.x} 312 V1010`} data-axis />
+          <path key={a.x} d={`M${a.x} 170 V${GROUND + 60}`} data-axis />
         ))}
       </g>
-      <path d="M0 942 H2048" fill="none" stroke="currentColor" strokeWidth="2.4" pathLength={1} data-line data-ground />
-      <g data-axes-labels fontFamily="var(--font-mono)" fontSize="22" fill="currentColor" textAnchor="middle">
+      <path d={`M0 ${GROUND} H2048`} fill="none" stroke="currentColor" strokeWidth="3" pathLength={1} data-line data-ground />
+      <g data-axes-labels fontFamily="var(--font-mono)" fontSize="28" fill="currentColor" textAnchor="middle">
         {axes.map((a) => (
           <g key={a.x}>
-            <circle cx={a.x} cy={290} r={22} fill="none" stroke="currentColor" strokeWidth="1.6" />
-            <text x={a.x} y={298}>
+            <circle cx={a.x} cy={140} r={28} fill="none" stroke="currentColor" strokeWidth="2" />
+            <text x={a.x} y={150}>
               {a.label}
             </text>
           </g>
         ))}
       </g>
 
-      <g data-hatch stroke="currentColor" strokeWidth="1.2" opacity="0.3">
-        {Array.from({ length: 64 }, (_, i) => (
-          <path key={i} d={`M${i * 32} 972 l30 -30`} />
+      <g data-hatch stroke="currentColor" strokeWidth="1.6" opacity="0.3">
+        {Array.from({ length: 52 }, (_, i) => (
+          <path key={i} d={`M${i * 40} ${GROUND + 38} l38 -38`} />
         ))}
       </g>
 
-      <g data-building fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinejoin="round" strokeLinecap="round">
+      <g data-building fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinejoin="round" strokeLinecap="round">
         {building.map((d, i) => (
           <path key={i} d={d} pathLength={1} data-line />
         ))}
       </g>
 
-      <g data-dims fill="none" stroke="currentColor" strokeWidth="1.6" fontFamily="var(--font-mono)" fontSize="24">
-        <path d="M82 372 H1415 M82 352 V392 M1415 352 V392 M70 384 l24 -24 M1403 384 l24 -24" pathLength={1} data-line />
-        <rect x="650" y="352" width="220" height="40" fill="var(--paper)" stroke="none" data-dim-bg />
-        <text x="760" y="380" textAnchor="middle" fill="currentColor" stroke="none">
+      <g data-dims fill="none" stroke="currentColor" strokeWidth="2" fontFamily="var(--font-mono)" fontSize="30">
+        <path d="M604 215 H1879 M604 193 V237 M1879 193 V237 M590 229 l28 -28 M1865 229 l28 -28" pathLength={1} data-line />
+        <rect x="1100" y="193" width="280" height="44" fill="var(--paper)" stroke="none" data-dim-bg />
+        <text x="1240" y="225" textAnchor="middle" fill="currentColor" stroke="none">
           Лейк хаус
         </text>
 
-        <path d="M1520 942 V423 M1500 942 H1540 M1500 700 H1540 M1500 487 H1540 M1500 423 H1540" pathLength={1} data-line />
+        <path d={`M160 ${GROUND} V259 M136 ${GROUND} H184 M136 553 H184 M136 259 H184`} pathLength={1} data-line />
         <g fill="currentColor" stroke="none" textAnchor="start">
-          <path d="M1548 942 l14 -18 h-28 Z" />
-          <text x="1572" y="948">терен</text>
-          <path d="M1548 700 l14 -18 h-28 Z" />
-          <text x="1572" y="706">етаж</text>
-          <path d="M1548 487 l14 -18 h-28 Z" />
-          <text x="1572" y="493">покрив</text>
+          <path d={`M160 ${GROUND} l16 -22 h-32 Z`} />
+          <text x="196" y={GROUND - 10}>терен</text>
+          <path d="M160 553 l16 -22 h-32 Z" />
+          <text x="196" y="543">етаж</text>
+          <path d="M160 259 l16 -22 h-32 Z" />
+          <text x="196" y="249">покрив</text>
         </g>
       </g>
     </svg>
