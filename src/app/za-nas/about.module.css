@@ -1,0 +1,86 @@
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 48px clamp(40px, 7vw, 120px);
+  align-items: center;
+}
+
+.storyImg {
+  aspect-ratio: 4 / 5;
+}
+
+.storyText {
+  display: grid;
+  gap: 28px;
+  justify-items: start;
+}
+
+.storyText .prose p {
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+}
+
+.ext {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.chamber {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: 48px clamp(40px, 7vw, 120px);
+  align-items: center;
+}
+
+.chamber > div:last-child {
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+}
+
+.seal {
+  max-width: 360px;
+  justify-self: center;
+  animation: spin 40s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-strong);
+  width: 100%;
+}
+
+.reg dd {
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.partnersLead {
+  font-size: var(--fs-lead);
+  margin-block: 20px 32px;
+  max-width: 40ch;
+}
+
+@media (max-width: 900px) {
+  .story,
+  .chamber {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seal {
+    animation: none;
+  }
+}

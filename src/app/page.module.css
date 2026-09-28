@@ -1,0 +1,18 @@
+.ba {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px clamp(32px, 6vw, 120px);
+  align-items: center;
+}
+
+.baText {
+  display: grid;
+  gap: 28px;
+  justify-items: start;
+}
+
+@media (max-width: 900px) {
+  .ba {
+    grid-template-columns: 1fr;
+  }
+}

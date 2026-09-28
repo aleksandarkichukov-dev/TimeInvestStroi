@@ -1,0 +1,45 @@
+/* Общи стилове за вътрешните страници */
+
+.pageHead {
+  padding-top: calc(var(--header-h) + clamp(40px, 7vw, 100px));
+  padding-bottom: clamp(48px, 7vw, 100px);
+  border-bottom: 1px solid var(--line);
+}
+
+.title {
+  font-size: var(--fs-hero);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  margin-top: clamp(20px, 3vw, 40px);
+}
+
+.headRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px 48px;
+  margin-top: clamp(28px, 4vw, 56px);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 40px clamp(40px, 7vw, 120px);
+  align-items: start;
+}
+
+.sticky {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .sticky {
+    position: static;
+  }
+}

@@ -1,0 +1,171 @@
+.footer {
+  position: relative;
+  padding-top: clamp(72px, 10vw, 140px);
+  overflow: hidden;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  padding-bottom: 56px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.slogan {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 12ch;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.cols ul {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.cols a {
+  overflow-wrap: anywhere;
+}
+
+.chamber {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 24px;
+  padding-block: 28px;
+  border-block: 1px solid var(--line);
+}
+
+.badge {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.chamber p {
+  line-height: 1.4;
+}
+
+.group {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.group strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.wordmark {
+  position: relative;
+  padding-inline: var(--gutter);
+  margin-top: clamp(32px, 6vw, 80px);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 10.2vw, 12rem);
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  color: var(--ink-3);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.wordmark::before {
+  content: "ТАЙМИНВЕСТ";
+}
+
+.dim {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: -0.42em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--concrete);
+}
+
+.dim i {
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  position: relative;
+}
+
+.dim i:first-child::before,
+.dim i:last-child::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 1px;
+  height: 11px;
+  background: currentColor;
+}
+
+.dim i:first-child::before {
+  left: 0;
+}
+
+.dim i:last-child::after {
+  right: 0;
+}
+
+.dim em {
+  font-style: normal;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 24px 32px;
+}
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .group {
+    margin-left: 0;
+  }
+
+  .bottom {
+    padding-bottom: 96px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+}

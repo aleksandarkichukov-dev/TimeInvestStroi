@@ -1,0 +1,89 @@
+.card {
+  position: relative;
+}
+
+.link {
+  display: block;
+}
+
+.media {
+  position: relative;
+  overflow: hidden;
+  background: var(--concrete-3);
+}
+
+.imgWrap {
+  position: absolute;
+  inset: 0;
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+
+.link:hover .img,
+.link:focus-visible .img {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  color: var(--paper);
+  background: linear-gradient(transparent, rgb(0 0 0 / 0.55));
+  transform: translateY(100%);
+  transition: transform 0.6s var(--ease-out);
+}
+
+.link:hover .overlay,
+.link:focus-visible .overlay {
+  transform: translateY(0);
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 18px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+
+.title {
+  margin-top: 8px;
+  font-size: clamp(1.2rem, 1.7vw, 1.65rem);
+}
+
+.arrow {
+  flex-shrink: 0;
+  transition:
+    transform 0.6s var(--ease-out),
+    color 0.3s;
+}
+
+.link:hover .arrow {
+  transform: rotate(45deg);
+  color: var(--accent-2);
+}
+
+@media (hover: none) {
+  .overlay {
+    transform: none;
+  }
+}

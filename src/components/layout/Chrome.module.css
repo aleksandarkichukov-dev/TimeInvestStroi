@@ -1,0 +1,152 @@
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  transform: translateY(100%);
+  background: var(--ink);
+  background-image:
+    linear-gradient(rgb(84 185 255 / 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(84 185 255 / 0.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.curtainInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--white);
+}
+
+.curtainStripe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 14px;
+  background: repeating-linear-gradient(-45deg, var(--accent) 0 14px, var(--white) 14px 28px);
+}
+
+.progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  height: 3px;
+  background: var(--accent);
+  transform-origin: left;
+  transform: scaleX(var(--p, 0));
+  pointer-events: none;
+}
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 300;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  pointer-events: none;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transition:
+    width 0.4s var(--ease-out),
+    height 0.4s var(--ease-out),
+    margin 0.4s var(--ease-out),
+    background 0.3s,
+    border-color 0.3s,
+    opacity 0.3s;
+  mix-blend-mode: difference;
+  border-color: #fff;
+}
+
+.cursor[data-visible] {
+  opacity: 1;
+}
+
+.cursor[data-state="link"] {
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+}
+
+.cursor[data-state="label"] {
+  width: 96px;
+  height: 96px;
+  margin: -48px 0 0 -48px;
+  background: var(--accent);
+  border-color: var(--accent);
+  mix-blend-mode: normal;
+}
+
+.cursor[data-down] {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+}
+
+.cursorLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.cursor[data-state="label"] .cursorLabel {
+  opacity: 1;
+}
+
+.call {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  z-index: 45;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px 14px 16px;
+  border-radius: 999px;
+  background: var(--accent-strong);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow:
+    0 10px 30px rgb(0 0 0 / 0.18),
+    0 0 0 1px rgb(0 0 0 / 0.06);
+}
+
+.call svg {
+  animation: ring 3.2s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0%,
+  86%,
+  100% {
+    transform: rotate(0);
+  }
+  88%,
+  92%,
+  96% {
+    transform: rotate(-14deg);
+  }
+  90%,
+  94%,
+  98% {
+    transform: rotate(14deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .call {
+    display: inline-flex;
+  }
+}

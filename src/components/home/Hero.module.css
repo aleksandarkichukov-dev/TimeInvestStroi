@@ -1,0 +1,308 @@
+.hero {
+  position: relative;
+  height: 250vh;
+  background-color: var(--paper);
+}
+
+.hero[data-static] {
+  height: auto;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding-top: calc(var(--header-h) + clamp(12px, 3vh, 40px));
+  padding-bottom: clamp(16px, 3vh, 32px);
+  gap: clamp(20px, 3.5vh, 44px);
+}
+
+.hero[data-static] .sticky {
+  position: relative;
+  height: auto;
+  min-height: 100svh;
+}
+
+.intro {
+  display: grid;
+  gap: clamp(14px, 2.4vh, 28px);
+}
+
+.introRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 24px 64px;
+}
+
+.title {
+  font-size: clamp(2.2rem, min(5.2vw, 9vh), 5.6rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+}
+
+.aside {
+  display: grid;
+  gap: 22px;
+  justify-items: start;
+  padding-bottom: 6px;
+}
+
+.lead {
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.55;
+  max-width: 44ch;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stageWrap {
+  min-height: 0;
+}
+
+.stage {
+  position: relative;
+  height: 100%;
+  min-height: 280px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background-color: var(--white);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px),
+    linear-gradient(rgb(12 27 46 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(12 27 46 / 0.05) 1px, transparent 1px);
+  background-size:
+    100px 100px,
+    100px 100px,
+    20px 20px,
+    20px 20px;
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(100% 0 0 0);
+}
+
+.photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(12 27 46 / 0.55), transparent 38%);
+}
+
+.hero[data-static] .photo {
+  clip-path: none;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.drawing {
+  position: absolute;
+  inset: 0;
+  color: var(--ink);
+}
+
+.drawing svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero[data-static] .drawing {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.tick {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--ink);
+  border-style: solid;
+  border-width: 0;
+  z-index: 2;
+}
+
+.tl {
+  top: 10px;
+  left: 10px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.tr {
+  top: 10px;
+  right: 10px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.bl {
+  bottom: 10px;
+  left: 10px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.br {
+  bottom: 10px;
+  right: 10px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+/* Щамп като в архитектурен лист */
+.stamp {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: auto auto;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.stamp > div {
+  padding: 8px 12px;
+  border-left: 1px solid var(--ink);
+}
+
+.stamp > div:first-child {
+  border-left: 0;
+}
+
+.stamp dt {
+  opacity: 0.55;
+  font-size: 0.6rem;
+}
+
+.stamp dd {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.stamp > div:nth-child(2) dd {
+  background: var(--accent);
+  padding-inline: 4px;
+  margin-inline: -4px;
+}
+
+.caption {
+  position: absolute;
+  left: 28px;
+  bottom: 24px;
+  z-index: 3;
+  display: grid;
+  gap: 6px;
+  color: var(--white);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero[data-static] .caption {
+  opacity: 1;
+  visibility: visible;
+}
+
+.captionTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+  letter-spacing: -0.02em;
+}
+
+.caption:hover svg {
+  transform: translateX(4px);
+}
+
+.caption svg {
+  transition: transform 0.4s var(--ease-out);
+}
+
+.hint {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+}
+
+.hint svg {
+  animation: bob 1.8s ease-in-out infinite;
+}
+
+.hero[data-static] .hint {
+  display: none;
+}
+
+@keyframes bob {
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: 200vh;
+  }
+
+  .introRow {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: clamp(2rem, 10vw, 3.6rem);
+  }
+
+  .lead {
+    font-size: 0.98rem;
+  }
+
+  .stamp {
+    right: 12px;
+    top: 12px;
+    bottom: auto;
+  }
+
+  .caption {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .hint {
+    bottom: 14px;
+    left: auto;
+    right: 12px;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 720px) {
+  .lead {
+    display: none;
+  }
+}

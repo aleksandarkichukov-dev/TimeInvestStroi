@@ -1,0 +1,127 @@
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jumpLink {
+  display: inline-flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 10px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--paper);
+  font-weight: 500;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.jumpLink .mono {
+  color: var(--accent-strong);
+}
+
+.jumpLink:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.jumpLink:hover .mono {
+  color: var(--accent);
+}
+
+.group {
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: var(--header-h);
+}
+
+.groupIndex {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(3.4rem, 8vw, 7rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+}
+
+.groupTitle {
+  font-size: var(--fs-h2);
+  margin-block: 12px 16px;
+}
+
+.list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.thumb {
+  position: relative;
+  width: 96px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--paper-2);
+}
+
+.thumbImg {
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out);
+}
+
+.thumbPlaceholder {
+  position: absolute;
+  inset: 0;
+}
+
+.item:hover .thumbImg {
+  transform: scale(1.1);
+}
+
+.itemBody {
+  display: grid;
+  gap: 4px;
+}
+
+.itemTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 1.7vw, 1.55rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  transition: color 0.3s;
+}
+
+.item:hover .itemTitle {
+  color: var(--accent-strong);
+}
+
+.itemArrow {
+  transition: transform 0.6s var(--ease-out);
+}
+
+.item:hover .itemArrow {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 640px) {
+  .item {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .thumb {
+    width: 64px;
+  }
+
+  .itemArrow {
+    display: none;
+  }
+}

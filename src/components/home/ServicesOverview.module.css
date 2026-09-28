@@ -1,0 +1,119 @@
+.list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 16px 32px;
+  padding-block: clamp(24px, 3vw, 40px);
+  border-bottom: 1px solid var(--line-strong);
+  isolation: isolate;
+}
+
+.row::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(-1 * var(--gutter));
+  z-index: -1;
+  background: var(--paper-2);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.row:hover::before {
+  transform: scaleY(1);
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding-top: 0.5em;
+  color: var(--accent-strong);
+}
+
+.main {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.4vw, 3.2rem);
+}
+
+.titleLink {
+  transition: color 0.3s;
+}
+
+.titleLink:hover {
+  color: var(--accent-strong);
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+  padding-top: 6px;
+  padding-right: clamp(0px, 14vw, 220px);
+}
+
+.pill {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  background: var(--paper);
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+
+.pill:hover {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: var(--white);
+}
+
+.thumb {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: clamp(120px, 13vw, 200px);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  transform: translateY(-50%) rotate(3deg) scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.4s,
+    transform 0.7s var(--ease-out);
+}
+
+.row:hover .thumb {
+  opacity: 1;
+  transform: translateY(-50%) rotate(0) scale(1);
+}
+
+.thumbImg {
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .services {
+    padding-right: 0;
+  }
+
+  .thumb {
+    display: none;
+  }
+}

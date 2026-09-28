@@ -1,0 +1,48 @@
+.masonry {
+  columns: 3 280px;
+  column-gap: clamp(10px, 1.4vw, 20px);
+}
+
+.thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: clamp(10px, 1.4vw, 20px);
+  overflow: hidden;
+  break-inside: avoid;
+  background: var(--concrete-3);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s var(--ease-out);
+}
+
+.thumb:hover .img {
+  transform: scale(1.04);
+}
+
+.expand {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.3s,
+    transform 0.4s var(--ease-out);
+}
+
+.thumb:hover .expand,
+.thumb:focus-visible .expand {
+  opacity: 1;
+  transform: none;
+}

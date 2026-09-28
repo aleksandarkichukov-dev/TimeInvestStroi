@@ -1,0 +1,153 @@
+/* ─── Кóта ─── */
+.dim {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  color: var(--concrete);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+}
+
+.dim i {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+}
+
+.dim i:first-child::before,
+.dim i:last-child::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 1px;
+  height: 11px;
+  background: currentColor;
+}
+
+.dim i:first-child::before {
+  left: 0;
+  transform: skewX(-40deg);
+}
+
+.dim i:last-child::after {
+  right: 0;
+  transform: skewX(-40deg);
+}
+
+.dim em {
+  font-style: normal;
+  white-space: nowrap;
+}
+
+/* ─── Заглавие на секция ─── */
+.head {
+  display: grid;
+  gap: clamp(20px, 3vw, 36px);
+  margin-bottom: clamp(40px, 6vw, 88px);
+}
+
+.headRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.headRowSplit {
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 32px 64px;
+  align-items: end;
+}
+
+.headTitle {
+  max-width: 16ch;
+}
+
+.headAside {
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+}
+
+@media (max-width: 900px) {
+  .headRowSplit {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Снимка с маска ─── */
+.frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--concrete-3);
+}
+
+.frameInner {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+/* ─── Навигационна пътека ─── */
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.crumbs li:not(:last-child)::after {
+  content: "/";
+  margin-left: 6px;
+  opacity: 0.4;
+}
+
+.crumbs a {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.crumbs a:hover {
+  opacity: 1;
+}
+
+/* ─── Призив за оферта ─── */
+.cta {
+  padding-block: clamp(80px, 12vw, 180px);
+  border-top: 1px solid var(--line);
+}
+
+.ctaTitle {
+  font-size: var(--fs-hero);
+  max-width: 14ch;
+  margin-block: 28px clamp(32px, 5vw, 64px);
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaBtn {
+  padding: 1.4em 2.2em;
+  font-size: 0.9rem;
+}
+
