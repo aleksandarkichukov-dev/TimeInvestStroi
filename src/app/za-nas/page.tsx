@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageTransition } from "@/components/PageTransition";
 import { Breadcrumbs, CtaBand, RevealImage } from "@/components/ui";
 import { JsonLd, breadcrumbLd } from "@/components/JsonLd";
 import { Partners } from "@/components/home/Partners";
 import { ArrowUpRight } from "@/components/icons";
 import { site } from "@/content/site";
+import { img } from "@/lib/img";
 import inner from "../inner.module.css";
 import s from "./about.module.css";
 
@@ -47,20 +49,13 @@ export default function AboutPage() {
 
       <section className="section dark" aria-labelledby="chamber-title">
         <div className={`container ${s.chamber}`}>
-          <div className={s.seal} aria-hidden="true">
-            <svg viewBox="0 0 200 200">
-              <defs>
-                <path id="seal-circle" d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0" />
-              </defs>
-              <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" strokeWidth="1.5" />
-              <circle cx="100" cy="100" r="60" fill="var(--accent-strong)" />
-              <text fontFamily="var(--font-mono)" fontSize="11" letterSpacing="3" fill="currentColor">
-                <textPath href="#seal-circle">КАМАРА НА СТРОИТЕЛИТЕ В БЪЛГАРИЯ ·</textPath>
-              </text>
-              <text x="100" y="108" textAnchor="middle" fontFamily="var(--font-display)" fontWeight="600" fontSize="26" fill="#fff">
-                КСБ
-              </text>
-            </svg>
+          <div className={s.seal}>
+            <Image
+              src={img("/img/misc/kamara-na-stroitelite.webp")}
+              alt="Медал на Камарата на строителите в България – Централен професионален регистър"
+              sizes="(min-width: 900px) 360px, 70vw"
+              className={s.sealImg}
+            />
           </div>
           <div>
             <p className="eyebrow" data-fade>

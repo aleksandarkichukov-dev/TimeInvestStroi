@@ -41,15 +41,14 @@
 }
 
 .seal {
-  max-width: 360px;
+  width: min(360px, 70vw);
   justify-self: center;
-  animation: spin 40s linear infinite;
+  filter: drop-shadow(0 24px 48px rgb(0 0 0 / 0.45));
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+.sealImg {
+  width: 100%;
+  height: auto;
 }
 
 .reg {
@@ -76,11 +75,5 @@
   .story,
   .chamber {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .seal {
-    animation: none;
   }
 }
