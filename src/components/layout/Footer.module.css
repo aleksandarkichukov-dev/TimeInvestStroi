@@ -51,17 +51,11 @@
   border-block: 1px solid var(--line);
 }
 
-.badge {
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.9rem;
+.medal {
+  width: 72px;
+  height: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 6px 16px rgb(0 0 0 / 0.4));
 }
 
 .chamber p {

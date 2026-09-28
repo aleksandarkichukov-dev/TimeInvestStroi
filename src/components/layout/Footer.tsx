@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { nav, site } from "@/content/site";
 import { serviceGroups } from "@/content/services";
+import { img } from "@/lib/img";
 import { LogoMark } from "@/components/Logo";
 import { ArrowUpRight } from "@/components/icons";
 import s from "./Footer.module.css";
@@ -65,11 +67,16 @@ export function Footer() {
 
       <div className="container">
         <div className={s.chamber}>
-          <span className={s.badge}>{site.chamber.short}</span>
+          <Image
+            src={img("/img/misc/kamara-na-stroitelite.webp")}
+            alt="Медал на Камарата на строителите в България"
+            sizes="80px"
+            className={s.medal}
+          />
           <p>
-            Член на {site.chamber.name}
+            Част от „{site.chamber.name}“
             <br />
-            <span className="mono muted">Рег. № {site.chamber.reg}</span>
+            <span className="mono muted">вписана с № {site.chamber.reg}</span>
           </p>
           <a href={site.group.url} target="_blank" rel="noopener" className={s.group}>
             Част от групата <strong>{site.group.name}</strong> <ArrowUpRight width={16} height={16} />
