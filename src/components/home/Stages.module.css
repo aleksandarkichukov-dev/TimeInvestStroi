@@ -23,6 +23,15 @@
   will-change: transform;
 }
 
+.panels {
+  display: flex;
+  gap: clamp(24px, 3vw, 56px);
+}
+
+.dots {
+  display: none;
+}
+
 .intro {
   width: min(460px, 36vw);
   display: flex;
@@ -184,19 +193,68 @@
   .track {
     flex-direction: column;
     width: auto;
-    gap: 56px;
+    gap: 32px;
+    padding-inline: 0;
   }
 
   .intro {
     width: auto;
-    padding-right: 0;
+    padding-inline: var(--gutter);
+  }
+
+  /* Карти, които се плъзгат с пръст */
+  .panels {
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    padding-inline: var(--gutter);
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .panels::-webkit-scrollbar {
+    display: none;
   }
 
   .panel {
+    flex: 0 0 86%;
     width: auto;
     grid-template-columns: 1fr;
+    align-content: start;
+    align-items: start;
     padding-left: 0;
     border-left: 0;
+    scroll-snap-align: start;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 20px;
+    padding-inline: var(--gutter);
+  }
+
+  .dot {
+    display: grid;
+    place-items: center;
+    min-width: 40px;
+    height: 32px;
+    padding: 0 8px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    color: color-mix(in srgb, currentColor 70%, transparent);
+    transition:
+      background 0.3s,
+      color 0.3s,
+      border-color 0.3s;
+  }
+
+  .dot[aria-current] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--ink);
   }
 
   .media {
