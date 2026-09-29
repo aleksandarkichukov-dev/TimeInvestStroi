@@ -7,22 +7,6 @@
   text-wrap: pretty;
 }
 
-.chip {
-  position: relative;
-  display: inline-block;
-  width: 1.9em;
-  height: 0.86em;
-  vertical-align: -0.05em;
-  border-radius: 999px;
-  overflow: hidden;
-  margin-inline: 0.06em;
-  background: var(--concrete-3);
-}
-
-.chipImg {
-  object-fit: cover;
-}
-
 .row {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);

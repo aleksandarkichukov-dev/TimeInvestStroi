@@ -76,9 +76,6 @@ export function Hero() {
     <section ref={root} className={s.hero} aria-labelledby="hero-title">
       <div className={s.sticky}>
         <div className={`container ${s.intro}`}>
-          <p className="eyebrow" data-hero-fade>
-            <b>ТС</b> {site.name}
-          </p>
           <div className={s.introRow}>
             <h1 id="hero-title" className={s.title}>
               <span className="line-in">

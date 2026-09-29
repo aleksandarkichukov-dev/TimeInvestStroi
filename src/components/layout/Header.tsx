@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { nav, site } from "@/content/site";
+import { serviceGroups, servicesByGroup } from "@/content/services";
 import { Logo } from "@/components/Logo";
 import { ArrowRight, Phone } from "@/components/icons";
 import { lockScroll } from "@/lib/motion";
@@ -43,6 +44,7 @@ export function Header() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
+  const close = () => setOpen(false);
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   return (
@@ -87,36 +89,68 @@ export function Header() {
           <button
             className={s.burger}
             aria-expanded={open}
-            aria-controls="mobile-menu"
+            aria-controls="site-menu"
             aria-label={open ? "Затвори менюто" : "Отвори менюто"}
             onClick={() => setOpen((o) => !o)}
           >
+            <span />
             <span />
             <span />
           </button>
         </div>
       </div>
 
-      <div id="mobile-menu" className={s.menu} hidden={!open} inert={!open}>
-        <nav aria-label="Мобилна навигация">
-          <ul className={s.menuList}>
-            <li>
-              <Link href="/" className={s.menuLink}>
-                <span className="mono">00</span>Начало
-              </Link>
-            </li>
-            {nav.map((item, i) => (
-              <li key={item.href} style={{ "--i": i + 1 } as React.CSSProperties}>
-                <Link href={item.href} className={s.menuLink} aria-current={isActive(item.href) ? "page" : undefined}>
-                  <span className="mono">0{i + 1}</span>
-                  {item.label}
+      <div id="site-menu" className={s.menu} hidden={!open} inert={!open}>
+        <div className={s.menuGrid}>
+          <nav aria-label="Меню">
+            <ul className={s.menuList}>
+              <li>
+                <Link href="/" className={s.menuLink} onClick={close} aria-current={pathname === "/" ? "page" : undefined}>
+                  <span className="mono">00</span>Начало
                 </Link>
               </li>
-            ))}
-          </ul>
-        </nav>
+              {nav.map((item, i) => (
+                <li key={item.href} style={{ "--i": i + 1 } as React.CSSProperties}>
+                  <Link
+                    href={item.href}
+                    className={s.menuLink}
+                    onClick={close}
+                    aria-current={isActive(item.href) ? "page" : undefined}
+                  >
+                    <span className="mono">0{i + 1}</span>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className={s.menuSide}>
+            <p className="mono muted">Услуги</p>
+            <ul>
+              {serviceGroups.map((g) => (
+                <li key={g.id}>
+                  <Link href={`/uslugi#${g.id}`} className={s.sideLink} onClick={close}>
+                    <span className="mono">{g.index}</span>
+                    {g.title}
+                  </Link>
+                  <ul className={s.sideSub}>
+                    {servicesByGroup(g.id).map((svc) => (
+                      <li key={svc.slug}>
+                        <Link href={`/uslugi/${svc.slug}`} onClick={close}>
+                          {svc.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         <div className={s.menuFoot}>
-          <Link href="/kontakti#oferta" className="btn btn-accent">
+          <Link href="/kontakti#oferta" className="btn btn-accent" onClick={close}>
             Поискай оферта <ArrowRight className="btn-arrow" />
           </Link>
           <a href={site.phoneHref} className="mono">

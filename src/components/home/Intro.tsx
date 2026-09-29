@@ -1,15 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
-import { img } from "@/lib/img";
 import { site } from "@/content/site";
 import { ArrowRight } from "@/components/icons";
 import s from "./Intro.module.css";
-
-const Chip = ({ src }: { src: string }) => (
-  <span className={s.chip} aria-hidden="true">
-    <Image src={img(src)} alt="" fill sizes="160px" className={s.chipImg} />
-  </span>
-);
 
 export function Intro() {
   return (
@@ -19,8 +11,7 @@ export function Intro() {
           <b>01</b> За нас
         </p>
         <h2 id="intro-title" className={s.statement} data-fade>
-          Изграждане на всичко необходимо <Chip src="/img/projects/kashti-sotira/000.webp" /> във вашия дом с най-новите{" "}
-          <Chip src="/img/projects/lake-house/089.webp" /> и иновативни технологии, на разумна цена.
+          {site.about[1]}
         </h2>
 
         <div className={s.row}>

@@ -99,8 +99,7 @@ export function Cursor() {
 export function CallButton() {
   return (
     <a href={site.phoneHref} className={s.call} aria-label={`Обади се: ${site.phone}`}>
-      <Phone width={20} height={20} />
-      <span>Обади се</span>
+      <Phone width={24} height={24} />
     </a>
   );
 }
