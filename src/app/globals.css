@@ -32,10 +32,10 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
 
-  --fs-hero: clamp(2.1rem, 5.4vw, 5.2rem);
-  --fs-h1: clamp(1.9rem, 4.2vw, 4rem);
-  --fs-h2: clamp(1.6rem, 3.1vw, 2.9rem);
-  --fs-h3: clamp(1.15rem, 1.6vw, 1.45rem);
+  --fs-hero: clamp(2.4rem, 6.2vw, 6rem);
+  --fs-h1: clamp(2.2rem, 4.8vw, 4.6rem);
+  --fs-h2: clamp(1.8rem, 3.6vw, 3.4rem);
+  --fs-h3: clamp(1.25rem, 1.8vw, 1.65rem);
   --fs-lead: clamp(1.08rem, 1.45vw, 1.4rem);
   --fs-body: clamp(1rem, 1.05vw, 1.075rem);
   --fs-small: 0.875rem;
