@@ -106,7 +106,9 @@
   padding: 0.85em 1.3em;
 }
 
+/* Бутонът с трите чертички е само за таблет и телефон (на компютър менюто е в хедъра). */
 .burger {
+  display: none;
   position: relative;
   flex-shrink: 0;
   width: 48px;
@@ -252,6 +254,10 @@
 @media (max-width: 960px) {
   .nav {
     display: none;
+  }
+
+  .burger {
+    display: block;
   }
 
   .actions {
