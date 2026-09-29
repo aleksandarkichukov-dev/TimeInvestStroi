@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Manrope, Unbounded } from "next/font/google";
+import { Comfortaa, JetBrains_Mono, Manrope } from "next/font/google";
 import { site } from "@/content/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -8,10 +8,10 @@ import { MotionRoot } from "@/components/motion/MotionRoot";
 import { JsonLd, organizationLd } from "@/components/JsonLd";
 import "./globals.css";
 
-// Заглавията са само в една дебелина (600): по-малко файлове за зареждане.
-const display = Unbounded({
+// Заглавията са с Comfortaa: шрифтът на сегашния сайт и на визитката.
+const display = Comfortaa({
   subsets: ["latin", "cyrillic"],
-  weight: "600",
+  weight: "700",
   variable: "--f-display",
   display: "swap",
 });
