@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { nav, site } from "@/content/site";
-import { serviceGroups, servicesByGroup } from "@/content/services";
 import { Logo } from "@/components/Logo";
 import { ArrowRight, Phone } from "@/components/icons";
 import { lockScroll } from "@/lib/motion";
@@ -100,54 +99,31 @@ export function Header() {
         </div>
       </div>
 
+      {open && <button type="button" className={s.backdrop} aria-label="Затвори менюто" tabIndex={-1} onClick={close} />}
+
       <div id="site-menu" className={s.menu} hidden={!open} inert={!open}>
-        <div className={s.menuGrid}>
-          <nav aria-label="Меню">
-            <ul className={s.menuList}>
-              <li>
-                <Link href="/" className={s.menuLink} onClick={close} aria-current={pathname === "/" ? "page" : undefined}>
-                  <span className="mono">00</span>Начало
+        <nav aria-label="Меню">
+          <ul className={s.menuList}>
+            <li>
+              <Link href="/" className={s.menuLink} onClick={close} aria-current={pathname === "/" ? "page" : undefined}>
+                <span className="mono">00</span>Начало
+              </Link>
+            </li>
+            {nav.map((item, i) => (
+              <li key={item.href} style={{ "--i": i + 1 } as React.CSSProperties}>
+                <Link
+                  href={item.href}
+                  className={s.menuLink}
+                  onClick={close}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                >
+                  <span className="mono">0{i + 1}</span>
+                  {item.label}
                 </Link>
               </li>
-              {nav.map((item, i) => (
-                <li key={item.href} style={{ "--i": i + 1 } as React.CSSProperties}>
-                  <Link
-                    href={item.href}
-                    className={s.menuLink}
-                    onClick={close}
-                    aria-current={isActive(item.href) ? "page" : undefined}
-                  >
-                    <span className="mono">0{i + 1}</span>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <div className={s.menuSide}>
-            <p className="mono muted">Услуги</p>
-            <ul>
-              {serviceGroups.map((g) => (
-                <li key={g.id}>
-                  <Link href={`/uslugi#${g.id}`} className={s.sideLink} onClick={close}>
-                    <span className="mono">{g.index}</span>
-                    {g.title}
-                  </Link>
-                  <ul className={s.sideSub}>
-                    {servicesByGroup(g.id).map((svc) => (
-                      <li key={svc.slug}>
-                        <Link href={`/uslugi/${svc.slug}`} onClick={close}>
-                          {svc.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+            ))}
+          </ul>
+        </nav>
 
         <div className={s.menuFoot}>
           <Link href="/kontakti#oferta" className="btn btn-accent" onClick={close}>
