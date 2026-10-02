@@ -12,7 +12,7 @@ import { Magnetic } from "@/components/motion/Magnetic";
 import { HeroDrawing } from "./HeroDrawing";
 import s from "./Hero.module.css";
 
-const PHOTO = "/img/projects/lake-house/029.webp";
+const PHOTO = "/img/misc/hero-lake-house.webp";
 const PHASES = ["Чертеж", "Строеж", "Готово"];
 
 export function Hero() {
@@ -64,7 +64,7 @@ export function Hero() {
         .fromTo(q("[data-photo] img"), { scale: 1.12 }, { scale: 1, duration: 0.6 }, 0.38)
         .to(q("[data-drawing]"), { color: "#ffffff", duration: 0.2 }, 0.5)
         .to(q("[data-dim-bg]"), { autoAlpha: 0, duration: 0.1 }, 0.5)
-        .to(q("[data-hatch], [data-axes]"), { autoAlpha: 0, duration: 0.2 }, 0.6)
+        .to(q("[data-hatch], [data-axes], [data-levels]"), { autoAlpha: 0, duration: 0.2 }, 0.6)
         .to(q("[data-building]"), { autoAlpha: 0.25, duration: 0.25 }, 0.72)
         .fromTo(q("[data-caption]"), { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.12 }, 0.84)
         .to(q("[data-hint]"), { autoAlpha: 0, duration: 0.05 }, 0.02);
@@ -106,10 +106,12 @@ export function Hero() {
         <div className={`container ${s.stageWrap}`}>
           <div className={s.stage}>
             <div className={s.photo} data-photo>
-              <Image src={img(PHOTO)} alt="Лейк хаус" fill sizes="100vw" quality={75} className={s.img} />
+              <div className={s.canvas}>
+                <Image src={img(PHOTO)} alt="Лейк хаус" fill sizes="100vw" quality={85} className={s.img} />
+              </div>
             </div>
             <div className={s.drawing}>
-              <HeroDrawing />
+              <HeroDrawing className={s.canvas} />
             </div>
             <span className={`${s.tick} ${s.tl}`} />
             <span className={`${s.tick} ${s.tr}`} />
