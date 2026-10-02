@@ -30,7 +30,7 @@ const stages: Stage[] = [
     n: "02",
     title: "Изкоп",
     text: "Изкопните работи са процесът на изкопаване, премахване и преработка на земни маси, камъни и други материали от строителната площадка. Ние извършваме всякакъв тип изкопни работи.",
-    image: "/img/projects/lake-house/089.webp",
+    image: "/img/projects/kooperacia-napetov/018.webp",
     services: ["izkopni-raboti", "kartene-i-izvozvane"],
   },
   {
@@ -239,7 +239,7 @@ export function Stages() {
                     <div className={s.imgBox} data-panel-img>
                       <Image
                         src={img(st.image)}
-                        alt={`${st.title}: Лейк хаус`}
+                        alt={st.title}
                         fill
                         sizes="(min-width: 900px) 40vw, 100vw"
                         className={s.img}

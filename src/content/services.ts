@@ -56,7 +56,7 @@ export const services: Service[] = [
     body: [
       "Изкопните работи са процесът на изкопаване, премахване и преработка на земни маси, камъни и други материали от строителната площадка. Ние извършваме всякакъв тип изкопни работи.",
     ],
-    image: "/img/projects/lake-house/089.webp",
+    image: "/img/projects/kooperacia-napetov/018.webp",
   },
   {
     slug: "grub-stroezh",
