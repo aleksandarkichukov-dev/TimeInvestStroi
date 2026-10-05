@@ -67,12 +67,25 @@
   scroll-margin-top: var(--header-h);
 }
 
-@media (max-width: 900px) {
-  .lead {
-  margin-top: clamp(20px, 3vw, 32px);
+.quotePhoto {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  max-height: 62vh;
+  margin-top: clamp(28px, 4vw, 48px);
+  overflow: hidden;
+  background: var(--paper-2);
 }
 
-.cards {
+.quotePhotoImg {
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .cards {
     grid-template-columns: 1fr;
+  }
+
+  .quotePhoto {
+    display: none;
   }
 }

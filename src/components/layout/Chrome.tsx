@@ -15,7 +15,7 @@ export function Curtain() {
     <div className={s.curtain} style={{ viewTransitionName: "curtain" }} aria-hidden="true">
       <div className={s.curtainInner}>
         <LogoMark size={64} />
-        <span className="mono">Тайминвест Строй</span>
+        <span className={s.curtainName}>Timeinvest Stroy</span>
       </div>
       <span className={s.curtainStripe} />
     </div>

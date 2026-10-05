@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageTransition } from "@/components/PageTransition";
 import { Breadcrumbs, SectionHead } from "@/components/ui";
 import { JsonLd, breadcrumbLd } from "@/components/JsonLd";
 import { QuoteForm } from "@/components/contact/QuoteForm";
 import { ArrowUpRight, Mail, Phone, Pin } from "@/components/icons";
 import { site } from "@/content/site";
+import { img } from "@/lib/img";
 import inner from "../inner.module.css";
 import s from "./contact.module.css";
 
@@ -55,6 +57,16 @@ export default function ContactPage() {
         <div className={`container ${inner.split}`}>
           <div className={inner.sticky}>
             <SectionHead index="01" label="Оферта" title={<span id="quote-title">Поискай оферта</span>} />
+            <div className={s.quotePhoto} data-fade>
+              <Image
+                src={img("/img/projects/kooperacia-sotira/002.webp")}
+                alt="Кооперация Сотира"
+                fill
+                sizes="(min-width: 900px) 40vw, 100vw"
+                placeholder="blur"
+                className={s.quotePhotoImg}
+              />
+            </div>
           </div>
           <QuoteForm />
         </div>

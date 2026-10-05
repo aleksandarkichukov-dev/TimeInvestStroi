@@ -91,12 +91,12 @@ export function Hero() {
               </p>
               <div className={s.buttons} data-hero-fade>
                 <Magnetic>
-                  <Link href="/kontakti#oferta" className="btn btn-accent" data-cursor="Оферта" transitionTypes={["curtain"]}>
-                    Поискай оферта <ArrowRight className="btn-arrow" />
+                  <Link href="/proekti" className="btn btn-accent" data-cursor="Виж" transitionTypes={["curtain"]}>
+                    Проекти <ArrowRight className="btn-arrow" />
                   </Link>
                 </Magnetic>
-                <Link href="/proekti" className="btn btn-ghost" transitionTypes={["curtain"]}>
-                  Проекти
+                <Link href="/uslugi" className="btn btn-ghost" transitionTypes={["curtain"]}>
+                  Услуги
                 </Link>
               </div>
             </div>

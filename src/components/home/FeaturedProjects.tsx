@@ -24,14 +24,7 @@ export function FeaturedProjects() {
         />
         <div className={s.grid}>
           {list.map((p, i) => (
-            <div key={p.slug} className={s[`item${i}`]}>
-              <ProjectCard
-                project={p}
-                index={i}
-                aspect={i === 0 ? "16 / 10" : i === 1 || i === 2 ? "4 / 5" : "4 / 3"}
-                sizes={i === 0 ? "(min-width: 900px) 66vw, 100vw" : "(min-width: 900px) 33vw, 100vw"}
-              />
-            </div>
+            <ProjectCard key={p.slug} project={p} index={i} aspect="4 / 3" sizes="(min-width: 1100px) 33vw, (min-width: 640px) 50vw, 100vw" />
           ))}
         </div>
       </div>

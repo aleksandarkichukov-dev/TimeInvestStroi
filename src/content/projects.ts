@@ -114,4 +114,4 @@ export const getProject = (slug: string) => projects.find((p) => p.slug === slug
 export const coverOf = (p: Project) => projectImage(p.slug, p.cover);
 
 // Проекти за началната страница, в този ред.
-export const featured = ["lake-house", "kooperacia-sotira", "kashti-sotira", "sklad-chaika", "kashta-basein-akchelar"];
+export const featured = ["lake-house", "kooperacia-sotira", "kashti-sotira", "kashta-basein-akchelar", "kooperacia-radecki", "sklad-chaika"];

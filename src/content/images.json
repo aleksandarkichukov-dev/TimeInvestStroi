@@ -1,4 +1,9 @@
 {
+ "/img/misc/darvodelski.webp": {
+  "w": 960,
+  "h": 1280,
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAgCdASoMABAAA4BaJZQCw7Yv1kzkVyHV4pYyAP7YG0e3UVvE1C+tDJa5g2AwVlWpRqTT62Iq7CZi6TC++dgHQRyQItUO6SnGoQW76xlKhczQb2Bx/yQ+6AAAAA=="
+ },
  "/img/misc/el-instalacia.webp": {
   "w": 1024,
   "h": 768,
@@ -13,6 +18,16 @@
   "w": 600,
   "h": 594,
   "blur": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSGIAAAABcB3btprsr0grCqXGpRW8BodGnHhybwsRMQEAQXr7fG6pz6SV1+1knZqAtWuFGxOyVpzg17LajVtldNacX5rXU/M8ak6hJnRq2d8hl4VgHyQrA7CrZqrOTSaX+f33fZQLAFZQOCB6AAAAcAIAnQEqEAAQAAOAWiWoAnQFaAFmBi9W7xybQAD9/A9rg4gcAafnyg7zaXEj0O6Bkx/GQsYVeLaW6MjmZpkBNEIUabW7b+403VTx4WeiQ+dctjbIOiW2+fs5Kf3PF/uulmZkfxgw0CsO//fygBB098PdKKfRgkAAAAA="
+ },
+ "/img/misc/kartene.webp": {
+  "w": 1280,
+  "h": 960,
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJZQAAublwEFoAAD+qhRlrih/g+/xhJVACohcVaRsUdD3PLES4skj8+BFD+ONCkAzaPR5kgmUkg8u2sR9PQgfpmqsvAAA"
+ },
+ "/img/misc/sot.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAwAA4BaJZQCsAD1knbO5KNgAP6a6jI1QnlXN6nLS2CzcYcxVmq0epy9sMsluELfhS/nI0SOtQvOAAA="
  },
  "/img/partners/bosch.webp": {
   "w": 1200,

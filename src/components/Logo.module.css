@@ -1,0 +1,14 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--logo-size) * 0.32);
+  white-space: nowrap;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: calc(var(--logo-size) * 0.56);
+  letter-spacing: 0.005em;
+  line-height: 1;
+}

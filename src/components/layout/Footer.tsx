@@ -3,7 +3,7 @@ import Link from "next/link";
 import { nav, site } from "@/content/site";
 import { serviceGroups } from "@/content/services";
 import { img } from "@/lib/img";
-import { LogoMark } from "@/components/Logo";
+import { Logo } from "@/components/Logo";
 import { ArrowUpRight } from "@/components/icons";
 import s from "./Footer.module.css";
 
@@ -13,7 +13,9 @@ export function Footer() {
     <footer className={`dark ${s.footer}`}>
       <div className={`container ${s.top}`}>
         <div className={s.brand}>
-          <LogoMark size={56} />
+          <Link href="/" className={s.logo} aria-label="Timeinvest Stroy – начало" transitionTypes={["curtain"]}>
+            <Logo size={52} />
+          </Link>
           <p className={s.slogan}>{site.slogan}</p>
         </div>
 
@@ -84,13 +86,6 @@ export function Footer() {
         </div>
       </div>
 
-      <div className={s.wordmark} aria-hidden="true">
-        <span className={s.dim}>
-          <i />
-          <em className="mono">100%</em>
-          <i />
-        </span>
-      </div>
 
       <div className={`container ${s.bottom}`}>
         <span className="mono muted">

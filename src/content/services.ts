@@ -119,6 +119,7 @@ export const services: Service[] = [
     body: [
       "Изграждането на СОТ системи, видеонаблюдение и домофонни системи са важни за осигуряване на безопасността и комфорта на всеки дом или офис. Ние предлагаме висококачествени услуги за изграждане и монтаж на СОТ системи, видеонаблюдение и домофонни системи, които отговарят на нуждите на нашите клиенти.",
     ],
+    image: "/img/misc/sot.webp",
   },
 
   // ─── 04 Довършителни ───
@@ -179,6 +180,7 @@ export const services: Service[] = [
     body: [
       "Дърводелските услуги са важна част от строителството и ремонта на всеки вид имот. В нашата строителна компания, ние предлагаме широк спектър от дърводелски услуги, включително изработка на мебели, ремонт на врати и прозорци, изграждане на покриви и други. Ние от Тайминвест Строй разполагаме с екип от професионални дърводелци, които гарантират висококачествено изпълнение на всеки проект.",
     ],
+    image: "/img/misc/darvodelski.webp",
   },
 
   // ─── 05 Екстериор ───
@@ -213,7 +215,30 @@ export const services: Service[] = [
     body: [
       "Осигурете ефективно и безпроблемно премахване на стари стени и постройки, с нашите услуги за къртене и изнасяне, използвайки съвременна техника и опитни професионалисти за гарантирано качество и безопасност.",
     ],
+    image: "/img/misc/kartene.webp",
   },
+];
+
+// Редът на услугите на началната страница, както е на сегашния сайт.
+export const homeServiceOrder = [
+  "proektirane-i-arhitektura",
+  "interioren-dizain",
+  "grub-stroezh",
+  "sglobyaemi-kashti",
+  "izkopni-raboti",
+  "dograma",
+  "el-i-vik-instalacia",
+  "ovk",
+  "toplo-i-hidroizolacia",
+  "zidaria-i-zamazka",
+  "shpaklovka-boyadisvane-mazilki",
+  "suho-stroitelstvo",
+  "oblicovki-i-nastilki",
+  "kartene-i-izvozvane",
+  "garazhni-vrati-portali-ogradi",
+  "darvodelski-uslugi",
+  "sot-videonablyudenie-domofoni",
+  "ozelenyavane-polivni-sistemi",
 ];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);

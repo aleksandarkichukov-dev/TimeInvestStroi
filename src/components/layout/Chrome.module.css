@@ -21,6 +21,12 @@
   color: var(--white);
 }
 
+.curtainName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
 .curtainStripe {
   position: absolute;
   left: 0;

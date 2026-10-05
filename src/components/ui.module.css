@@ -125,21 +125,55 @@
   border-top: 1px solid var(--line);
 }
 
-.ctaTitle {
-  font-size: clamp(1.9rem, 5vw, 4.9rem);
-  max-width: 14ch;
-  margin-block: 28px clamp(32px, 5vw, 64px);
+.ctaGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 48px clamp(40px, 6vw, 96px);
+  align-items: center;
 }
 
-.ctaRow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
+.ctaTitle {
+  font-size: clamp(1.9rem, 4.4vw, 4.4rem);
+  max-width: 14ch;
+  margin-block: 28px clamp(28px, 4vw, 48px);
+}
+
+.ctaPhoto {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--paper-2);
+  border: 1px solid var(--line-strong);
+}
+
+.ctaPhotoImg {
+  object-fit: cover;
+}
+
+.tick {
+  position: absolute;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  border: 0 solid var(--white);
+}
+
+.tickTl {
+  top: 12px;
+  left: 12px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.tickBr {
+  right: 12px;
+  bottom: 12px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
 }
 
 .ctaActions {
+  margin-top: clamp(28px, 4vw, 44px);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -151,3 +185,9 @@
   font-size: 0.9rem;
 }
 
+
+@media (max-width: 900px) {
+  .ctaGrid {
+    grid-template-columns: 1fr;
+  }
+}

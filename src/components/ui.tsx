@@ -120,14 +120,14 @@ export function Breadcrumbs({ items }: { items: { label: string; href?: string }
 export function CtaBand() {
   return (
     <section className={`${s.cta} grid-paper`}>
-      <div className="container">
-        <p className="eyebrow" data-fade>
-          <b>→</b> Контакти
-        </p>
-        <h2 className={s.ctaTitle} data-split>
-          {site.contactsLead}
-        </h2>
-        <div className={s.ctaRow}>
+      <div className={`container ${s.ctaGrid}`}>
+        <div>
+          <p className="eyebrow" data-fade>
+            <b>→</b> Контакти
+          </p>
+          <h2 className={s.ctaTitle} data-split>
+            {site.contactsLead}
+          </h2>
           <p className="lead" data-fade>
             <a href={`mailto:${site.email}`} className="link-underline">
               {site.email}
@@ -145,6 +145,18 @@ export function CtaBand() {
               {site.phone}
             </a>
           </div>
+        </div>
+        <div className={s.ctaPhoto} data-fade>
+          <Image
+            src={img("/img/projects/lake-house/014.webp")}
+            alt="Лейк хаус"
+            fill
+            sizes="(min-width: 900px) 45vw, 100vw"
+            placeholder="blur"
+            className={s.ctaPhotoImg}
+          />
+          <span className={`${s.tick} ${s.tickTl}`} />
+          <span className={`${s.tick} ${s.tickBr}`} />
         </div>
       </div>
     </section>
