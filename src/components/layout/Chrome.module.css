@@ -25,6 +25,7 @@
   font-family: var(--font-logo);
   font-weight: 700;
   font-size: 1.6rem;
+  -webkit-text-stroke: 0.045em currentColor;
 }
 
 .curtainStripe {

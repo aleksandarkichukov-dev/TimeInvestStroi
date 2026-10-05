@@ -9,6 +9,8 @@
   font-family: var(--font-logo);
   font-weight: 700;
   font-size: calc(var(--logo-size) * 0.56);
-  letter-spacing: 0.005em;
+  letter-spacing: 0.01em;
   line-height: 1;
+  /* Comfortaa е най-много 700, затова името е леко удебелено с контур. */
+  -webkit-text-stroke: 0.045em currentColor;
 }

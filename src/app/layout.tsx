@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Comfortaa, JetBrains_Mono, Manrope, Nunito } from "next/font/google";
+import { Comfortaa, JetBrains_Mono, Manrope, Nunito_Sans } from "next/font/google";
 import { site } from "@/content/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -8,9 +8,9 @@ import { MotionRoot } from "@/components/motion/MotionRoot";
 import { JsonLd, organizationLd } from "@/components/JsonLd";
 import "./globals.css";
 
-// Заглавията са с Nunito: заоблен като логото, но с обикновени кирилски букви
+// Заглавията са с Nunito Sans: обикновени кирилски букви и прави (незаоблени) краища
 // (в Comfortaa малките кирилски букви са ръкописни: д като g, т като m).
-const display = Nunito({
+const display = Nunito_Sans({
   subsets: ["latin", "cyrillic"],
   weight: ["700", "800"],
   variable: "--f-display",

@@ -74,6 +74,7 @@ export const services: Service[] = [
     title: "Сглобяеми къщи",
     short: "Сглобяеми къщи с чудесни разпределения, бърз монтаж и на актуални цени.",
     body: ["Сглобяеми къщи с чудесни разпределения, бърз монтаж и на актуални цени."],
+    image: "/img/services/sglobyaemi-kashti.webp",
   },
   {
     slug: "zidaria-i-zamazka",
