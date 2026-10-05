@@ -55,8 +55,10 @@ const stages: Stage[] = [
     services: [
       "toplo-i-hidroizolacia",
       "shpaklovka-boyadisvane-mazilki",
+      "suho-stroitelstvo",
       "oblicovki-i-nastilki",
       "dograma",
+      "darvodelski-uslugi",
     ],
   },
   {

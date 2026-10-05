@@ -1,14 +1,4 @@
 {
- "/img/misc/darvodelski.webp": {
-  "w": 960,
-  "h": 1280,
-  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAgCdASoMABAAA4BaJZQCw7Yv1kzkVyHV4pYyAP7YG0e3UVvE1C+tDJa5g2AwVlWpRqTT62Iq7CZi6TC++dgHQRyQItUO6SnGoQW76xlKhczQb2Bx/yQ+6AAAAA=="
- },
- "/img/misc/el-instalacia.webp": {
-  "w": 1024,
-  "h": 768,
-  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAwAA4BaJYgCdAD2O+7VhBgAAP7mmM+Zm9tzs3FBNtTBhaGevHcf9A9E6eNf+vqK5Yj3OyzhSlSrswyAwdikkGom/DwYeNQeIAAA"
- },
  "/img/misc/hero-lake-house.webp": {
   "w": 2000,
   "h": 1406,
@@ -18,16 +8,6 @@
   "w": 600,
   "h": 594,
   "blur": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSGIAAAABcB3btprsr0grCqXGpRW8BodGnHhybwsRMQEAQXr7fG6pz6SV1+1knZqAtWuFGxOyVpzg17LajVtldNacX5rXU/M8ak6hJnRq2d8hl4VgHyQrA7CrZqrOTSaX+f33fZQLAFZQOCB6AAAAcAIAnQEqEAAQAAOAWiWoAnQFaAFmBi9W7xybQAD9/A9rg4gcAafnyg7zaXEj0O6Bkx/GQsYVeLaW6MjmZpkBNEIUabW7b+403VTx4WeiQ+dctjbIOiW2+fs5Kf3PF/uulmZkfxgw0CsO//fygBB098PdKKfRgkAAAAA="
- },
- "/img/misc/kartene.webp": {
-  "w": 1280,
-  "h": 960,
-  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJZQAAublwEFoAAD+qhRlrih/g+/xhJVACohcVaRsUdD3PLES4skj8+BFD+ONCkAzaPR5kgmUkg8u2sR9PQgfpmqsvAAA"
- },
- "/img/misc/sot.webp": {
-  "w": 1024,
-  "h": 768,
-  "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAwAA4BaJZQCsAD1knbO5KNgAP6a6jI1QnlXN6nLS2CzcYcxVmq0epy9sMsluELfhS/nI0SOtQvOAAA="
  },
  "/img/partners/bosch.webp": {
   "w": 1200,
@@ -1488,5 +1468,90 @@
   "w": 2000,
   "h": 1500,
   "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAwAA4BaJZgCdAYt9tHn2zgAAMyjy1MzHYpBzmnr2LrX3IBwPfHV+hhnoE3UyE9JOUi/g1u46QyOPzkCb4s257gnC5cS9EbnxBCdIoAAAA=="
+ },
+ "/img/services/darvodelski-uslugi.webp": {
+  "w": 960,
+  "h": 1280,
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAgCdASoMABAAA4BaJZQCw7Yv1kzkVyHV4pYyAP7YG0e3UVvE1C+tDJa5g2AwVlWpRqTT62Iq7CZi6TC++dgHQRyQItUO6SnGoQW76xlKhczQb2Bx/yQ+6AAAAA=="
+ },
+ "/img/services/dograma.webp": {
+  "w": 2000,
+  "h": 1500,
+  "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAwAA4BaJQAAU+uFLr1IAP51SFpPaPJVJyLN4ALYB0wgjr1Z/KoEZlGkBFuYOkoM2uRKES1FBfcn6r4AAA=="
+ },
+ "/img/services/el-i-vik-instalacia.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAwAA4BaJYgCdAD2O+7VhBgAAP7mmM+Zm9tzs3FBNtTBhaGevHcf9A9E6eNf+vqK5Yj3OyzhSlSrswyAwdikkGom/DwYeNQeIAAA"
+ },
+ "/img/services/garazhni-vrati-portali-ogradi.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAwAA4BaJZQCdAEPUtmDdWgIAAD9U/kBwaz7cjNnpRDfyEsjne1b2CdsWbrYeqjAaJj6pdqgVT13fw2I8mtoGGrerxquAAA="
+ },
+ "/img/services/grub-stroezh.webp": {
+  "w": 1280,
+  "h": 960,
+  "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAwAA4BaJbACdAD0u73KBv5JwAD+r51Mas8D0uQiLZ7IEJKJuaUiOrEzUjK7VwXyMghAHmNU5iTqJM7bPz7VRWs64vZfKGfx9gE8iQ2N6GlQAAA="
+ },
+ "/img/services/interioren-dizain.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAwAA4BaJZQCdADpz8POvAAA/lvKyY7svFyonLKKe2Y3MjCcEpzdKqdQgaugzISklLl7A8xG/SSh2jWry25U6ai0Gpu+6INAQAAA"
+ },
+ "/img/services/izkopni-raboti.webp": {
+  "w": 1232,
+  "h": 924,
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAwAA4BaJQBOgCKpbGJApeAA/pFqhv0tEVr056L5L5PlMd8sVr2QZxzWCvSRaXCUuesGb5hMLOwdn4ZF5KGnFQ5Bfl97BQqEgAAA"
+ },
+ "/img/services/kartene-i-izvozvane.webp": {
+  "w": 1280,
+  "h": 960,
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJZQAAublwEFoAAD+qhRlrih/g+/xhJVACohcVaRsUdD3PLES4skj8+BFD+ONCkAzaPR5kgmUkg8u2sR9PQgfpmqsvAAA"
+ },
+ "/img/services/oblicovki-i-nastilki.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAwAA4BaJZwAAto7DC34OgAA/uA272Luce51no8lbrjli1UWgMHySIBZ10VWzNpVrJnjUOrrT+2i8FEiDieXgAA="
+ },
+ "/img/services/ovk.webp": {
+  "w": 1280,
+  "h": 960,
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAwAA4BaJYwCdAYtLnsF5PBQAPlN+dfHT0vYn9xzagY/RargpYu6MC8QB2+LVki2eYMxm5c2QNsDRdaTM4Zih7d54KfEat3l3qLhIJUQv8MU6yAAAA=="
+ },
+ "/img/services/ozelenyavane-polivni-sistemi.webp": {
+  "w": 1024,
+  "h": 769,
+  "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAAwAA4BaJYgCdADdsh1Ay/3IAP6U3fben3Yq7ugfzkTc2XtvR69EW8aa9FOf1t2dy2woH/SPb17T8YecDOJagC0Iw60aUgJ9EJ8ZsV8azuhAN+HBhIlc3MPGgAAA"
+ },
+ "/img/services/proektirane-i-arhitektura.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAwAA4BaJagCdAEDYv4WWQAAAP7s3ynFnd1VCFwHiS1qii7rmkGQjGuymh9FdL3xyQVImWaxNN1M2SDxfaTc7sf7+RJS+11mCP1A/VEwtIAA"
+ },
+ "/img/services/shpaklovka-boyadisvane-mazilki.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAQCdASoQAAwAA4BaJZwAAoRhdgAA2x9Wz9BaIGLrVGn9JvAvFyoTIB+jCbSR5RNqBVoFltBgUMrWHe5E7VipFN5hAAAA"
+ },
+ "/img/services/sot-videonablyudenie-domofoni.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAwAA4BaJZQCsAD1knbO5KNgAP6a6jI1QnlXN6nLS2CzcYcxVmq0epy9sMsluELfhS/nI0SOtQvOAAA="
+ },
+ "/img/services/suho-stroitelstvo.webp": {
+  "w": 1024,
+  "h": 768,
+  "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAwAA4BaJZwAAn+/OXz2oAD+kWqCKt6mWSBAXI5HnVwWZM9oVd242il0H9xiLn5nTyjoB5MAn+w/OYFFGI7wSIIwHWa4V8nTxU7eH+FAAA=="
+ },
+ "/img/services/toplo-i-hidroizolacia.webp": {
+  "w": 960,
+  "h": 1280,
+  "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQAgCdASoMABAAA4BaJQBOkCYwThigltwAAP5BHLgujYBFBAofc5zNO321s/OQgOAUK2RusyV4aar/HdWD1OYGGzoPDku2gGozJeBVFxvyePqyPttX5wvry2u1mTzi9vSW7GbLaGTegY8FVR3tfAAA"
+ },
+ "/img/services/zidaria-i-zamazka.webp": {
+  "w": 2000,
+  "h": 1500,
+  "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQAAwAA4BaJYgCdAEUnzFD5oAA8mLvi+llrVdcGabjgqhlA1LGmCmuXuc3/hTbTIAAAA=="
  }
 }
