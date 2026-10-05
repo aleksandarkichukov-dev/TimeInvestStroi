@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Comfortaa, JetBrains_Mono, Manrope } from "next/font/google";
+import { Comfortaa, JetBrains_Mono, Manrope, Nunito } from "next/font/google";
 import { site } from "@/content/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -8,11 +8,20 @@ import { MotionRoot } from "@/components/motion/MotionRoot";
 import { JsonLd, organizationLd } from "@/components/JsonLd";
 import "./globals.css";
 
-// Заглавията са с Comfortaa: шрифтът на сегашния сайт и на визитката.
-const display = Comfortaa({
+// Заглавията са с Nunito: заоблен като логото, но с обикновени кирилски букви
+// (в Comfortaa малките кирилски букви са ръкописни: д като g, т като m).
+const display = Nunito({
   subsets: ["latin", "cyrillic"],
-  weight: "700",
+  weight: ["700", "800"],
   variable: "--f-display",
+  display: "swap",
+});
+
+// Името в логото „Timeinvest Stroy“ е с Comfortaa, както е в оригиналното лого.
+const logo = Comfortaa({
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--f-logo",
   display: "swap",
 });
 
@@ -56,7 +65,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="bg" className={`${display.variable} ${body.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="bg" className={`${display.variable} ${logo.variable} ${body.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>

@@ -21,6 +21,7 @@
   --line-inv: rgb(246 248 251 / 0.14);
 
   --font-display: var(--f-display), "Arial Black", system-ui, sans-serif;
+  --font-logo: var(--f-logo), var(--font-display);
   --font-body: var(--f-body), system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: var(--f-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
 

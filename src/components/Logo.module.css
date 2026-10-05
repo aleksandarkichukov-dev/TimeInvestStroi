@@ -6,7 +6,7 @@
 }
 
 .name {
-  font-family: var(--font-display);
+  font-family: var(--font-logo);
   font-weight: 700;
   font-size: calc(var(--logo-size) * 0.56);
   letter-spacing: 0.005em;
