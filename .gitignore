@@ -46,3 +46,6 @@ next-env.d.ts
 
 # локални настройки на редактора
 /.claude/
+
+# NodeJS Manager на хостинга
+/app.yml
