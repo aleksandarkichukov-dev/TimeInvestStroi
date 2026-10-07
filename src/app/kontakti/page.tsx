@@ -59,8 +59,8 @@ export default function ContactPage() {
             <SectionHead index="01" label="Оферта" title={<span id="quote-title">Поискай оферта</span>} />
             <div className={s.quotePhoto} data-fade>
               <Image
-                src={img("/img/projects/kooperacia-sotira/002.webp")}
-                alt="Кооперация Сотира"
+                src={img("/img/misc/hero-lake-house.webp")}
+                alt="Лейк хаус"
                 fill
                 sizes="(min-width: 900px) 40vw, 100vw"
                 placeholder="blur"

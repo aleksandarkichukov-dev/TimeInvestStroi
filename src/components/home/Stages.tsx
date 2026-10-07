@@ -37,7 +37,7 @@ const stages: Stage[] = [
     n: "03",
     title: "Груб строеж",
     text: "Това е етапът, когато сградата придобива своята форма и размери, но още не е завършена и не се извършват детайлни работи по декорация и обзавеждане.",
-    image: "/img/projects/lake-house/076.webp",
+    image: "/img/projects/kashta-alen-mak/000.webp",
     services: ["grub-stroezh", "zidaria-i-zamazka", "sglobyaemi-kashti"],
   },
   {

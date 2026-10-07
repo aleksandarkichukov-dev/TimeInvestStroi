@@ -549,10 +549,10 @@
   "h": 768,
   "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAwAA4BaJYwCdADyuJgliSgA/uf7eaoneDoyZOl2O1g3tsqYX4+AaF8JuIN/iyWeXSd+brwzKEQ5jZRXHW4aEwAAAA=="
  },
- "/img/projects/kashti-sotira/000.webp": {
+ "/img/projects/kashti-sotira/000a.webp": {
   "w": 1080,
   "h": 1350,
-  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAQCdASoNABAAA4BaJQBdgB6Cy13iAAD+rT0+HfuIcbwc7sYLPn0fiQjpujuxZzWuwoaddrVnAYb8rxXPG1e0TRBy7Z57SLWgtzlXM+/5PWyICvt1827jOiEpyRHW7qcc0F/ZXPjMJETf8AA="
+  "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAQCdASoNABAAA4BaJQBdgB6Cy13iAAD+rT0+HfuIcbwc7sYLPn0fiQjpujuxZzWuwoaddrVnAYb8rxXPG1e0TRBy7Z57SLWgt1NaK8h0pSI2Umev7HKarj7laqgJeBrOkC/srnxmEiJv+AA="
  },
  "/img/projects/kashti-sotira/004.webp": {
   "w": 1080,
@@ -1524,10 +1524,10 @@
   "h": 769,
   "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAAwAA4BaJYgCdADdsh1Ay/3IAP6U3fben3Yq7ugfzkTc2XtvR69EW8aa9FOf1t2dy2woH/SPb17T8YecDOJagC0Iw60aUgJ9EJ8ZsV8azuhAN+HBhIlc3MPGgAAA"
  },
- "/img/services/proektirane-i-arhitektura.webp": {
-  "w": 1024,
-  "h": 768,
-  "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAwAA4BaJagCdAEDYv4WWQAAAP7s3ynFnd1VCFwHiS1qii7rmkGQjGuymh9FdL3xyQVImWaxNN1M2SDxfaTc7sf7+RJS+11mCP1A/VEwtIAA"
+ "/img/services/proektirane-chertezhi.webp": {
+  "w": 2000,
+  "h": 1346,
+  "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJZwAD4wHUWH40IAA/sG6l1rToYPFblBoM3ZZpDgGw7IplCHjAsi7dRGGpon1TsBGR4qf1HnIhq/X21jt96iAAAA="
  },
  "/img/services/sglobyaemi-kashti.webp": {
   "w": 1200,

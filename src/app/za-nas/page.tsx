@@ -30,7 +30,7 @@ export default function AboutPage() {
 
       <section className="section">
         <div className={`container ${s.story}`}>
-          <RevealImage src="/img/projects/kashti-sotira/000.webp" alt="Къщи Сотира" className={s.storyImg} sizes="(min-width: 900px) 40vw, 100vw" />
+          <RevealImage src="/img/projects/kashti-sotira/000a.webp" alt="Къщи Сотира" className={s.storyImg} sizes="(min-width: 900px) 40vw, 100vw" />
           <div className={s.storyText}>
             <p className="eyebrow" data-fade>
               <b>01</b> За нас
