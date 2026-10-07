@@ -7,6 +7,7 @@ import { nav, site } from "@/content/site";
 import { Logo } from "@/components/Logo";
 import { ArrowRight, Phone } from "@/components/icons";
 import { lockScroll } from "@/lib/motion";
+import { SocialLinks } from "@/components/SocialLinks";
 import s from "./Header.module.css";
 
 export function Header() {
@@ -135,6 +136,7 @@ export function Header() {
           <a href={`mailto:${site.email}`} className="mono">
             {site.email}
           </a>
+          <SocialLinks />
         </div>
       </div>
     </header>

@@ -32,6 +32,7 @@ export const organizationLd = {
   },
   memberOf: { "@type": "Organization", name: site.chamber.name },
   parentOrganization: { "@type": "Organization", name: site.group.name, url: site.group.url },
+  sameAs: site.social.map((item) => item.url),
 };
 
 export function breadcrumbLd(items: { name: string; path: string }[]) {

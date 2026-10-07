@@ -5,6 +5,7 @@ import { serviceGroups } from "@/content/services";
 import { img } from "@/lib/img";
 import { Logo } from "@/components/Logo";
 import { ArrowUpRight } from "@/components/icons";
+import { SocialLinks } from "@/components/SocialLinks";
 import s from "./Footer.module.css";
 
 export function Footer() {
@@ -17,6 +18,7 @@ export function Footer() {
             <Logo size={52} />
           </Link>
           <p className={s.slogan}>{site.slogan}</p>
+          <SocialLinks />
         </div>
 
         <div className={s.cols}>

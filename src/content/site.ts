@@ -30,6 +30,10 @@ export const site = {
     reg: "I – TV 025990",
   },
   group: { name: "Timeinvest", url: "https://timeinvest.eu/" },
+  social: [
+    { name: "Facebook", url: "https://www.facebook.com/people/Timeinvest-Stroy/100089976582299/" },
+    { name: "Instagram", url: "https://www.instagram.com/timeinveststroy/" },
+  ],
 };
 
 // Логата на партньорите от сегашния сайт, в същия ред (файловете са в media-src/partners/).
