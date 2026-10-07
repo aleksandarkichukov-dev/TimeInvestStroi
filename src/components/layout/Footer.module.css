@@ -36,6 +36,17 @@
   gap: 32px;
 }
 
+.colTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  line-height: 1.2;
+  color: var(--white);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
 .cols ul {
   display: grid;
   gap: 10px;

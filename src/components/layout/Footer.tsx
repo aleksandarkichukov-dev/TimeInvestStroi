@@ -21,7 +21,7 @@ export function Footer() {
 
         <div className={s.cols}>
           <div>
-            <p className="mono muted">Навигация</p>
+            <p className={s.colTitle}>Навигация</p>
             <ul>
               {nav.map((item) => (
                 <li key={item.href}>
@@ -33,7 +33,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="mono muted">Услуги</p>
+            <p className={s.colTitle}>Услуги</p>
             <ul>
               {serviceGroups.map((g) => (
                 <li key={g.id}>
@@ -45,7 +45,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="mono muted">Контакти</p>
+            <p className={s.colTitle}>Контакти</p>
             <ul>
               <li>
                 <a href={site.phoneHref} className="link-underline">
