@@ -3,8 +3,9 @@ import { quoteSteps, type QuotePayload } from "@/content/quote";
 import { site } from "@/content/site";
 
 // Приема запитване за оферта и го изпраща по имейл на office@timeinveststroy.com.
-// Настройки (в .env.local или в хостинга): SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS,
-// MAIL_FROM (по избор), MAIL_TO (по подразбиране site.email). Виж .env.example.
+// Изпращане: MAIL_TRANSPORT=sendmail (през пощенския сървър на хостинга, без парола)
+// или SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS. По избор: MAIL_FROM, MAIL_TO
+// (по подразбиране site.email). Виж .env.example.
 
 const recent = new Map<string, number[]>();
 const WINDOW = 10 * 60 * 1000;
@@ -75,26 +76,29 @@ export async function POST(request: Request) {
     .map(([k, v]) => `<tr><td style="color:#666;vertical-align:top">${k}</td><td>${esc(v || "—").replace(/\n/g, "<br>")}</td></tr>`)
     .join("")}</table>`;
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, MAIL_FROM, MAIL_TO } = process.env;
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+  const { MAIL_TRANSPORT, SENDMAIL_PATH, SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, MAIL_FROM, MAIL_TO } = process.env;
+  const useSendmail = MAIL_TRANSPORT === "sendmail";
+  if (!useSendmail && (!SMTP_HOST || !SMTP_USER || !SMTP_PASS)) {
     if (process.env.NODE_ENV !== "production") {
-      console.info("[оферта] SMTP не е настроен; запитването не е изпратено:\n" + text);
+      console.info("[оферта] изпращането не е настроено; запитването не е изпратено:\n" + text);
       return Response.json({ ok: true, dev: true });
     }
-    console.error("[оферта] липсват SMTP_HOST / SMTP_USER / SMTP_PASS");
+    console.error("[оферта] липсва MAIL_TRANSPORT=sendmail или SMTP_HOST / SMTP_USER / SMTP_PASS");
     return bad("Формата временно не работи.", 500);
   }
 
   try {
     const port = Number(SMTP_PORT || 465);
-    const transport = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port,
-      secure: port === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    });
+    const transport = useSendmail
+      ? nodemailer.createTransport({ sendmail: true, newline: "unix", path: SENDMAIL_PATH || "/usr/sbin/sendmail" })
+      : nodemailer.createTransport({
+          host: SMTP_HOST,
+          port,
+          secure: port === 465,
+          auth: { user: SMTP_USER, pass: SMTP_PASS },
+        });
     await transport.sendMail({
-      from: MAIL_FROM || `"${site.name} – сайт" <${SMTP_USER}>`,
+      from: MAIL_FROM || `"${site.name} – сайт" <${SMTP_USER || site.email}>`,
       to: MAIL_TO || site.email,
       replyTo: data.email || undefined,
       subject: `Запитване за оферта: ${data.type || "проект"} – ${data.name}`,
