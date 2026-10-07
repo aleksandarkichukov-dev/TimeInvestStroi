@@ -148,7 +148,7 @@ export function CtaBand() {
         </div>
         <div className={s.ctaPhoto} data-fade>
           <Image
-            src={img("/img/projects/lake-house/014.webp")}
+            src={img("/img/misc/hero-lake-house.webp")}
             alt="Лейк хаус"
             fill
             sizes="(min-width: 900px) 45vw, 100vw"

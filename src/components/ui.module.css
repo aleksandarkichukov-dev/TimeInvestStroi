@@ -148,6 +148,7 @@
 
 .ctaPhotoImg {
   object-fit: cover;
+  object-position: 62% 50%;
 }
 
 .tick {
