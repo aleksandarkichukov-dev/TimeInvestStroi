@@ -16,6 +16,17 @@ export function MotionRoot() {
 
   useEffect(() => {
     if (prefersReducedMotion()) return;
+    // Позициите на анимациите се преизчисляват след зареждане на снимките и шрифтовете.
+    const refresh = () => ScrollTrigger.refresh();
+    window.addEventListener("load", refresh);
+    document.fonts?.ready.then(refresh);
+
+    // На телефони и таблети скролът остава нативен: там е плавен по подразбиране, а Lenis заедно със
+    // скриващата се адресна лента в Chrome/Google на телефона кара страницата да „подскача“.
+    ScrollTrigger.config({ ignoreMobileResize: true });
+    const touch = window.matchMedia("(pointer: coarse)").matches || ScrollTrigger.isTouch === 1;
+    if (touch) return () => window.removeEventListener("load", refresh);
+
     const lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 1, anchors: { offset: -80 } });
     smooth.lenis = lenis;
     lenis.on("scroll", ScrollTrigger.update);
@@ -23,9 +34,6 @@ export function MotionRoot() {
     gsap.ticker.add(tick);
     gsap.ticker.lagSmoothing(0);
 
-    const refresh = () => ScrollTrigger.refresh();
-    window.addEventListener("load", refresh);
-    document.fonts?.ready.then(refresh);
     return () => {
       window.removeEventListener("load", refresh);
       gsap.ticker.remove(tick);

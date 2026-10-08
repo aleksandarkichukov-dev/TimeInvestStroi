@@ -17,3 +17,8 @@ name=$(grep -oE '^- name: *[^ ]+' app.yml | awk '{print $3}')
 npm pkg set scripts.start="next start -p $port -H localhost"
 pm2 restart "$name" --update-env
 echo "Готово: $name на порт $port"
+
+# Предварително генериране на снимките във фонов режим (лог: ~/warm-images.log).
+sleep 5
+nohup nice -n 10 node scripts/warm-images.mjs "http://127.0.0.1:$port" > ~/warm-images.log 2>&1 &
+echo "Снимките се генерират във фонов режим (~/warm-images.log)"

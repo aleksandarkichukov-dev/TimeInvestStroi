@@ -182,7 +182,8 @@
 }
 
 /* ─── Телефон и намалено движение: вертикален списък ─── */
-@media (max-width: 899px) {
+/* Плъзгащи се карти: тесен екран или сензорен екран (телефон в хоризонтално положение, таблет). */
+@media (max-width: 899px), (pointer: coarse) {
   .sticky {
     position: relative;
     height: auto;
@@ -271,7 +272,7 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) and (min-width: 900px) {
+@media (prefers-reduced-motion: reduce) and (min-width: 900px) and (pointer: fine) {
   .sticky {
     position: relative;
     height: auto;

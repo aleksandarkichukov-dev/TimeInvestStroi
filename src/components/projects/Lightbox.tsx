@@ -94,7 +94,7 @@ export function Lightbox({
           alt={current.alt}
           fill
           sizes="100vw"
-          quality={85}
+          quality={75}
           className={s.image}
           placeholder="blur"
           draggable={false}
@@ -104,7 +104,7 @@ export function Lightbox({
       {/* предварително зареждане на съседните снимки */}
       <div hidden>
         {neighbours.map((n) => (
-          <Image key={n.src} src={img(n.src)} alt="" sizes="100vw" quality={85} loading="eager" />
+          <Image key={n.src} src={img(n.src)} alt="" sizes="100vw" quality={75} loading="eager" />
         ))}
       </div>
 

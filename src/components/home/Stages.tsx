@@ -148,7 +148,7 @@ export function Stages() {
       const marks = gsap.utils.toArray<HTMLElement>("[data-mark]", el);
       const mm = gsap.matchMedia();
 
-      mm.add("(min-width: 900px)", () => {
+      mm.add("(min-width: 900px) and (pointer: fine)", () => {
         // Първите 12% от скрола задържат началната позиция, за да се прочете заглавието.
         const HOLD = 0.12;
         const distance = () => track.scrollWidth - window.innerWidth;
