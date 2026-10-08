@@ -19,4 +19,12 @@ export const legacyRedirects: Record<string, string> = {
   "/sklad-chaika": "/proekti/sklad-chaika",
   "/feed": "/",
   "/comments/feed": "/",
+  "/contacts": "/kontakti",
+  "/about-us": "/za-nas",
+  "/home": "/",
+  "/sample-page": "/",
 };
+
+// Автоматични страници на WordPress (автор, категории, етикети, страниците на блога), които Google още пази
+// от стария сайт. Пренасочват се към началната страница.
+export const legacyPrefixes = ["/author/", "/category/", "/tag/", "/page/"];

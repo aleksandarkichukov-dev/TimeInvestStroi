@@ -11,8 +11,8 @@ import inner from "../inner.module.css";
 import s from "./about.module.css";
 
 export const metadata: Metadata = {
-  title: "За нас",
-  description: site.about[0],
+  title: "За нас: строителна фирма във Варна",
+  description: `${site.name} – строителна фирма във Варна. ${site.about[0]}`,
   alternates: { canonical: "/za-nas" },
 };
 

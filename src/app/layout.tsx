@@ -41,10 +41,11 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name}: ${site.slogan}`,
+    // Ключовата фраза за търсене е в началото на заглавието (видимото мото на сайта не се променя).
+    default: `Строителна фирма във Варна | ${site.name}`,
     template: `%s · ${site.name}`,
   },
-  description: site.about[0],
+  description: `${site.name} – строителна фирма във Варна. ${site.about[0]}`,
   applicationName: site.name,
   alternates: { canonical: "/" },
   openGraph: {

@@ -13,8 +13,8 @@ import inner from "../inner.module.css";
 import s from "./services.module.css";
 
 export const metadata: Metadata = {
-  title: "Услуги",
-  description: `Услуги на ${site.name}: ${services.map((svc) => svc.title.toLowerCase()).slice(0, 8).join(", ")} и др.`,
+  title: "Строителни услуги във Варна",
+  description: `Строителни услуги във Варна от ${site.name}: ${services.map((svc) => svc.title.toLowerCase()).slice(0, 8).join(", ")} и др.`,
   alternates: { canonical: "/uslugi" },
 };
 

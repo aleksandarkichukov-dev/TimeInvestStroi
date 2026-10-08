@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!svc) return {};
   const og = svc.image ? img(svc.image) : null;
   return {
-    title: svc.title,
+    title: `${svc.title} във Варна`,
     description: svc.body[0],
     alternates: { canonical: `/uslugi/${svc.slug}` },
     openGraph: og ? { images: [{ url: og.src, width: og.width, height: og.height, alt: svc.title }] } : undefined,

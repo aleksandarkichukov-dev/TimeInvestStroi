@@ -11,7 +11,7 @@ import inner from "../inner.module.css";
 import s from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Контакти",
+  title: "Контакти: строителна фирма във Варна",
   description: `${site.contactsLead} ${site.phone}, ${site.email}, ${site.address.city}, ${site.address.street}.`,
   alternates: { canonical: "/kontakti" },
 };

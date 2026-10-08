@@ -9,8 +9,8 @@ import { site } from "@/content/site";
 import s from "../inner.module.css";
 
 export const metadata: Metadata = {
-  title: "Проекти",
-  description: `Проекти на ${site.name}. ${site.projectsLead}`,
+  title: "Проекти: строителство във Варна и региона",
+  description: `Проекти на ${site.name} във Варна и региона: къщи, кооперации, склад. ${site.projectsLead}`,
   alternates: { canonical: "/proekti" },
 };
 

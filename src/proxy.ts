@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { legacyRedirects } from "@/content/redirects";
+import { legacyPrefixes, legacyRedirects } from "@/content/redirects";
 
 // 301 пренасочвания от адресите на стария WordPress сайт и премахване на „/“ в края.
 export function proxy(request: NextRequest) {
@@ -12,7 +12,8 @@ export function proxy(request: NextRequest) {
   }
   const key = path.replace(/\/+$/, "") || "/";
 
-  const target = legacyRedirects[key.toLowerCase()];
+  const lower = key.toLowerCase();
+  const target = legacyRedirects[lower] ?? (legacyPrefixes.some((p) => (lower + "/").startsWith(p)) ? "/" : undefined);
   if (target) {
     return NextResponse.redirect(new URL(target, request.url), 301);
   }
