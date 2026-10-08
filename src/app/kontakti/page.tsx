@@ -12,7 +12,7 @@ import s from "./contact.module.css";
 
 export const metadata: Metadata = {
   title: "Контакти: строителна фирма във Варна",
-  description: `${site.contactsLead} ${site.phone}, ${site.email}, ${site.address.city}, ${site.address.street}.`,
+  description: `${site.contactsLead} ${site.phone}, ${site.email}, ${site.addressLine}.`,
   alternates: { canonical: "/kontakti" },
 };
 
@@ -43,7 +43,7 @@ export default function ContactPage() {
               <Pin width={26} height={26} />
               <span className="mono">Адрес</span>
               <strong>
-                {site.address.city}, {site.address.street}
+                {site.addressLine}
               </strong>
               <span className={s.hint}>
                 Google Maps <ArrowUpRight width={14} height={14} />

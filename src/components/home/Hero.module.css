@@ -43,6 +43,21 @@
   letter-spacing: -0.01em;
 }
 
+.kicker {
+  margin-bottom: clamp(14px, calc(var(--app-h) * 0.022), 24px);
+  color: var(--accent-strong);
+  font-weight: 500;
+  line-height: 1.2;
+  animation: kicker-in 0.9s var(--ease-out) both;
+}
+
+@keyframes kicker-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
 .aside {
   display: grid;
   gap: 22px;

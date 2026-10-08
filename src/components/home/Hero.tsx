@@ -78,6 +78,7 @@ export function Hero() {
         <div className={`container ${s.intro}`}>
           <div className={s.introRow}>
             <h1 id="hero-title" className={s.title}>
+              <span className={`eyebrow ${s.kicker}`}>{site.tagline}</span>
               <span className="line-in">
                 <span>Оправдаваме</span>
               </span>

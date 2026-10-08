@@ -133,7 +133,7 @@ export function CtaBand() {
               {site.email}
             </a>
             <br />
-            {site.address.city}, {site.address.street}
+            {site.addressLine}
           </p>
           <div className={s.ctaActions} data-fade>
             <Magnetic>

@@ -26,9 +26,9 @@ export const organizationLd = {
   taxID: site.eik,
   address: {
     "@type": "PostalAddress",
-    streetAddress: site.address.street,
+    streetAddress: `${site.address.street}, ${site.address.office}`,
     addressLocality: site.address.city,
-    postalCode: "9010",
+    postalCode: site.address.postalCode,
     addressCountry: site.address.country,
   },
   areaServed: [

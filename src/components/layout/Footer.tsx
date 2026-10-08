@@ -17,6 +17,7 @@ export function Footer() {
           <Link href="/" className={s.logo} aria-label="Timeinvest Stroy – начало" transitionTypes={["curtain"]}>
             <Logo size={52} />
           </Link>
+          <p className={s.tagline}>{site.tagline}</p>
           <p className={s.slogan}>{site.slogan}</p>
           <SocialLinks />
         </div>
@@ -61,7 +62,7 @@ export function Footer() {
               </li>
               <li>
                 <a href={site.mapsUrl} target="_blank" rel="noopener" className="link-underline">
-                  {site.address.city}, {site.address.street}
+                  {site.addressLine}
                 </a>
               </li>
             </ul>
