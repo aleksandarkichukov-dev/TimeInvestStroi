@@ -5,8 +5,7 @@
 .sticky {
   position: sticky;
   top: 0;
-  height: 100lvh;
-  height: 100svh;
+  height: var(--app-h);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -63,7 +62,7 @@
 
 .media {
   position: relative;
-  height: min(60lvh, 560px);
+  height: min(calc(var(--app-h) * 0.6), 560px);
   overflow: hidden;
   background: var(--ink-2);
 }
@@ -138,7 +137,7 @@
 /* ─── Скеле ─── */
 .scaffold {
   padding-inline: var(--gutter);
-  margin-top: clamp(20px, 4lvh, 44px);
+  margin-top: clamp(20px, calc(var(--app-h) * 0.04), 44px);
 }
 
 .scaffoldTrack {

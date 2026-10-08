@@ -68,7 +68,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="bg" className={`${display.variable} ${logo.variable} ${body.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        {/* На телефон височината на екрана (--app-h) се замразява при зареждане и се сменя само при завъртане.
+            В Chrome/Google на iPhone скриващата се адресна лента преоразмерява страницата и иначе
+            всичко, зависещо от височината на екрана, „скача“ при скролиране. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var d=document.documentElement;d.classList.add('js');if(!matchMedia('(pointer: coarse)').matches)return;var w=0;function s(){if(innerWidth===w)return;w=innerWidth;d.style.setProperty('--app-h',innerHeight+'px')}s();addEventListener('resize',s)})()",
+          }}
+        />
       </head>
       <body>
         <a href="#main" className="skip-link">
