@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 250vh;
+  height: 250lvh;
   background-color: var(--paper);
 }
 
@@ -11,13 +11,13 @@
 .sticky {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100lvh;
   height: 100svh;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  padding-top: calc(var(--header-h) + clamp(12px, 3vh, 40px));
-  padding-bottom: clamp(16px, 3vh, 32px);
-  gap: clamp(20px, 3.5vh, 44px);
+  padding-top: calc(var(--header-h) + clamp(12px, 3lvh, 40px));
+  padding-bottom: clamp(16px, 3lvh, 32px);
+  gap: clamp(20px, 3.5lvh, 44px);
 }
 
 .hero[data-static] .sticky {
@@ -28,7 +28,7 @@
 
 .intro {
   display: grid;
-  gap: clamp(14px, 2.4vh, 28px);
+  gap: clamp(14px, 2.4lvh, 28px);
 }
 
 .introRow {
@@ -39,7 +39,7 @@
 }
 
 .title {
-  font-size: clamp(2.3rem, min(4.9vw, 9vh), 5rem);
+  font-size: clamp(2.3rem, min(4.9vw, 9lvh), 5rem);
   line-height: 1.08;
   letter-spacing: -0.01em;
 }
@@ -275,7 +275,7 @@
 
 @media (max-width: 900px) {
   .hero {
-    height: 200vh;
+    height: 200lvh;
   }
 
   .introRow {
