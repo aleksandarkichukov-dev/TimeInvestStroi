@@ -92,7 +92,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               {svc.image ? (
                 <Image
                   src={img(svc.image)}
-                  alt={svc.title}
+                  alt={`${svc.title} във Варна – ${site.name}`}
                   fill
                   preload
                   sizes="(min-width: 900px) 45vw, 100vw"

@@ -110,6 +110,9 @@ export const projects: Project[] = [
 ];
 
 export const projectImage = (slug: string, file: string) => `/img/projects/${slug}/${file}.webp`;
+// Всички проекти са във Варна и околностите (Аксаково, Казашко, Акчелар и др.) — за описанията на снимките.
+export const projectPlace = "строителство във Варна и региона";
+
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 export const coverOf = (p: Project) => projectImage(p.slug, p.cover);
 

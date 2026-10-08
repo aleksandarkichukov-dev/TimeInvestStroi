@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { img } from "@/lib/img";
+import { projectPlace } from "@/content/projects";
 import { Expand } from "@/components/icons";
 import { Lightbox } from "./Lightbox";
 import s from "./Gallery.module.css";
@@ -10,7 +11,7 @@ import s from "./Gallery.module.css";
 // Снимките на проекта (от началото на строежа до завършения обект) с лайтбокс.
 export function Gallery({ title, images }: { title: string; images: string[] }) {
   const [open, setOpen] = useState<number | null>(null);
-  const items = images.map((src, i) => ({ src, label: title, alt: `${title}, снимка ${i + 1}` }));
+  const items = images.map((src, i) => ({ src, label: title, alt: `${title} – ${projectPlace}, снимка ${i + 1}` }));
 
   return (
     <>

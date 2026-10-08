@@ -11,7 +11,7 @@ import { Breadcrumbs, CtaBand } from "@/components/ui";
 import { JsonLd, breadcrumbLd } from "@/components/JsonLd";
 import { ArrowRight } from "@/components/icons";
 import { site } from "@/content/site";
-import { categories, coverOf, getProject, projectImage, projects } from "@/content/projects";
+import { categories, coverOf, getProject, projectImage, projectPlace, projects } from "@/content/projects";
 import { img } from "@/lib/img";
 import s from "./project.module.css";
 
@@ -27,10 +27,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!p) return {};
   const cover = img(coverOf(p));
   return {
-    title: p.title,
-    description: `${p.title}: снимки от проекта на ${site.name}.`,
+    title: `${p.title}: проект във Варна и региона`,
+    description: `${p.title}: снимки от проекта на ${site.name} – ${projectPlace}.`,
     alternates: { canonical: `/proekti/${p.slug}` },
-    openGraph: { images: [{ url: cover.src, width: cover.width, height: cover.height, alt: p.title }] },
+    openGraph: { images: [{ url: cover.src, width: cover.width, height: cover.height, alt: `${p.title} – ${projectPlace}` }] },
   };
 }
 
@@ -69,7 +69,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <div className={s.hero}>
               <Image
                 src={img(coverOf(p))}
-                alt={p.title}
+                alt={`${p.title} – ${projectPlace}`}
                 fill
                 preload
                 sizes="(min-width: 1520px) 1440px, 100vw"
@@ -96,7 +96,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <BeforeAfter
                 before={projectImage(p.slug, p.beforeAfter.before)}
                 after={projectImage(p.slug, p.beforeAfter.after)}
-                alt={p.title}
+                alt={`${p.title} – ${projectPlace}`}
               />
             </div>
           </section>
