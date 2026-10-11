@@ -97,8 +97,8 @@ export const projects: Project[] = [
     slug: "kooperacia-napetov",
     title: "Кооперация П. Напетов",
     category: "kooperacii",
-    cover: "007",
-    images: n("019 018 017 016 015 014 013 011 009 007 006 004 002 000"),
+    cover: "025",
+    images: n("019 018 017 016 015 014 013 011 009 007 006 004 002 000 020 021 022 023 024 025 026 027 028 029"),
   },
   {
     slug: "kashta-alen-mak",
