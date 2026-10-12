@@ -19,7 +19,7 @@ export const organizationLd = {
   slogan: site.slogan,
   description: site.about.join(" "),
   url: site.url,
-  logo: `${site.url}/icon.svg`,
+  logo: `${site.url}/img/logo/timeinvest-stroy-512.png`,
   image: `${site.url}/img/projects/lake-house/000.webp`,
   telephone: site.phone.replace(/\s/g, ""),
   email: site.email,

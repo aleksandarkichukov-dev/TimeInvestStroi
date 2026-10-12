@@ -4,7 +4,7 @@ export const site = {
   url: "https://www.timeinveststroy.com",
   name: "Тайминвест Строй",
   nameLatin: "Timeinvest Stroy",
-  legalName: "„Тайминвест Строй“ ЕООД",
+  legalName: "„Тайминвест Строй“ ООД",
   eik: "207032593",
   slogan: "Оправдаваме вашите очаквания.",
   about: [
