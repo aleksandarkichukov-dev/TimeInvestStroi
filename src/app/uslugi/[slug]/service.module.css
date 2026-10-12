@@ -109,6 +109,79 @@
   color: var(--white);
 }
 
+.worksTitle {
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  margin-block: 20px clamp(24px, 3vw, 40px);
+}
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.6vw, 20px);
+}
+
+.works > li {
+  min-width: 0;
+}
+
+.work {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.workMedia {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--paper-2);
+}
+
+.workImg {
+  object-fit: cover;
+  transition: transform 0.9s var(--ease-out);
+}
+
+.work:hover .workImg {
+  transform: scale(1.05);
+}
+
+.workCaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.workCaption svg {
+  transition: transform 0.4s var(--ease-out);
+}
+
+.work:hover .workCaption {
+  color: var(--accent-strong);
+}
+
+.work:hover .workCaption svg {
+  transform: translateX(3px);
+}
+
+@media (max-width: 640px) {
+  .works {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workCaption {
+    font-size: 0.85rem;
+  }
+
+  .workCaption :global(.mono) {
+    display: none;
+  }
+}
+
 .pager {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -12,6 +12,8 @@ export type Service = {
   short: string;
   body: string[];
   image?: string;
+  // Снимки от проектите, на които се вижда тази услуга („<проект>/<снимка>“), показвани на страницата ѝ.
+  projectPhotos?: string[];
 };
 
 export const serviceGroups: ServiceGroup[] = [
@@ -57,6 +59,14 @@ export const services: Service[] = [
       "Изкопните работи са процесът на изкопаване, премахване и преработка на земни маси, камъни и други материали от строителната площадка. Ние извършваме всякакъв тип изкопни работи.",
     ],
     image: "/img/services/izkopni-raboti.webp",
+    projectPhotos: [
+      "kooperacia-napetov/018",
+      "kooperacia-napetov/019",
+      "kooperacia-napetov/017",
+      "kooperacia-sotira/044",
+      "kashta-ezero/071",
+      "kashti-kazashko/068",
+    ],
   },
   {
     slug: "grub-stroezh",
@@ -67,6 +77,14 @@ export const services: Service[] = [
       "Грубият строеж е фазата на строителството, която включва основната конструкция на сградата, като стени, подове, покриви и други елементи, които осигуряват стабилността и функционалността на сградата. Това е етапът, когато сградата придобива своята форма и размери, но още не е завършена и не се извършват детайлни работи по декорация и обзавеждане. Грубият строеж е важен за сигурността и устойчивостта на сградата и осигурява основата за по-нататъшните фази на строителството.",
     ],
     image: "/img/services/grub-stroezh.webp",
+    projectPhotos: [
+      "kooperacia-napetov/021",
+      "kashta-alen-mak/000",
+      "kashti-kazashko/017",
+      "kashta-ezero/004",
+      "kooperacia-sotira/022",
+      "kashta-alen-mak/013",
+    ],
   },
   {
     slug: "sglobyaemi-kashti",
@@ -85,6 +103,14 @@ export const services: Service[] = [
       "Качествената зидария и замазка са от съществено значение за изграждането на здрава и качествена конструкция. Ние в Тайминвест Строй предлагаме висококачествени услуги за зидария и замазка, които отговарят на нуждите и предпочитанията на нашите клиенти. Ако търсите надежден изпълнител на зидария и замазка, не се колебайте да се свържете с нас.",
     ],
     image: "/img/services/zidaria-i-zamazka.webp",
+    projectPhotos: [
+      "kashta-alen-mak/002",
+      "kooperacia-sotira/025",
+      "lake-house/069",
+      "kooperacia-radecki/006",
+      "kashti-kazashko/020",
+      "lake-house/051",
+    ],
   },
 
   // ─── 03 Инсталации ───
@@ -98,6 +124,12 @@ export const services: Service[] = [
       "Ние можем да изградим електрически системи от нулата или да модернизираме вече съществуващи, за да отговарят на всички изисквания за безопасност и ефективност. Нашите услуги включват проектиране, монтаж и поддръжка на електрически системи, включително разпределителни табла, кабелни инсталации, осветление, контролни и защитни устройства, както и други електрически компоненти.",
     ],
     image: "/img/services/el-i-vik-instalacia.webp",
+    projectPhotos: [
+      "kooperacia-radecki/009",
+      "kooperacia-radecki/011",
+      "lake-house/082",
+      "lake-house/083",
+    ],
   },
   {
     slug: "ovk",
@@ -133,6 +165,13 @@ export const services: Service[] = [
       "Ефективна топло и хидроизолация е от изключителна важност за оптимални условия на живот във вашия дом. Ние предлагаме висококачествени услуги за топло и хидроизолация, които отговарят на нуждите и предпочитанията на нашите клиенти. Ако търсите надежден изпълнител на топло и хидроизолация, не се колебайте да се свържете с нас.",
     ],
     image: "/img/services/toplo-i-hidroizolacia.webp",
+    projectPhotos: [
+      "kooperacia-sotira/013",
+      "kooperacia-sotira/041",
+      "steni-akchelar/011",
+      "steni-akchelar/014",
+      "kashta-ezero/007",
+    ],
   },
   {
     slug: "shpaklovka-boyadisvane-mazilki",
@@ -143,6 +182,13 @@ export const services: Service[] = [
       "Внесете завършеност и издръжливост във вашия дом с нашите услуги за мазилки, предлагащи широка гама от текстури, цветове и дълготрайни решения за вътрешни и външни повърхности. Шпакловката и боядисването са от ключово значение за преобразяването на всяко жилище. Ние предлагаме висококачествени услуги за шпакловка и боядисване, които отговарят на нуждите и предпочитанията на нашите клиенти.",
     ],
     image: "/img/services/shpaklovka-boyadisvane-mazilki.webp",
+    projectPhotos: [
+      "kashta-aksakovo/008",
+      "kashta-aksakovo/010",
+      "kashta-aksakovo/012",
+      "kooperacia-sotira/009",
+      "kooperacia-sotira/010",
+    ],
   },
   {
     slug: "suho-stroitelstvo",
@@ -151,6 +197,10 @@ export const services: Service[] = [
     short: "Окачени тавани, растерни тавани, преградни стени, декоративни и нестандартни фигури със скрито осветление.",
     body: ["Окачени тавани, растерни тавани, преградни стени, декоративни и нестандартни фигури със скрито осветление."],
     image: "/img/services/suho-stroitelstvo.webp",
+    projectPhotos: [
+      "kashta-aksakovo/006",
+      "kashta-aksakovo/010",
+    ],
   },
   {
     slug: "oblicovki-i-nastilki",
@@ -161,6 +211,11 @@ export const services: Service[] = [
       "Ние предлагаме голям избор от облицовки и настилки за всяко помещение, включително бани, кухни, коридори, тераси и други. Нашите експерти по монтаж и инсталация са в състояние да инсталират облицовки и настилки с голяма внимателност и внимание към детайлите.",
     ],
     image: "/img/services/oblicovki-i-nastilki.webp",
+    projectPhotos: [
+      "kashta-aksakovo/002",
+      "kashta-aksakovo/004",
+      "lake-house/003",
+    ],
   },
   {
     slug: "dograma",
@@ -172,6 +227,13 @@ export const services: Service[] = [
       "Предлагаме голям избор от цветове, текстури и дизайни за алуминиевата и ПВЦ дограма, които да се съобразят с нуждите на нашите клиенти. Нашите експерти по дизайн са в състояние да предложат персонализирани решения, които да отразят стила и предпочитанията на нашите клиенти.",
     ],
     image: "/img/services/dograma.webp",
+    projectPhotos: [
+      "lake-house/015",
+      "lake-house/036",
+      "lake-house/043",
+      "kashti-kazashko/006",
+      "kashta-ezero/009",
+    ],
   },
   {
     slug: "darvodelski-uslugi",
@@ -194,6 +256,12 @@ export const services: Service[] = [
       "Ние предлагаме висококачествени услуги за изработка и монтаж на гаражни врати, портали и огради, които отговарят на нуждите на нашите клиенти. Разполагаме с голям избор от гаражни врати, портали и огради, които са изработени от най-добрите материали и технологии. Нашите експерти по монтаж и инсталация са в състояние да предложат персонализирани решения за всеки вид имот, като съобразят стила и предпочитанията на нашите клиенти.",
     ],
     image: "/img/services/garazhni-vrati-portali-ogradi.webp",
+    projectPhotos: [
+      "lake-house/016",
+      "lake-house/047",
+      "lake-house/020",
+      "kashta-aksakovo/000",
+    ],
   },
   {
     slug: "ozelenyavane-polivni-sistemi",
@@ -207,6 +275,13 @@ export const services: Service[] = [
       "Ако имате нужда от услуги по изграждане на озеленяване, не се колебайте да се свържете с нас. Ние ще ви помогнем да създадете идеалното зелено пространство за вас и вашето семейство.",
     ],
     image: "/img/services/ozelenyavane-polivni-sistemi.webp",
+    projectPhotos: [
+      "lake-house/000",
+      "lake-house/014",
+      "lake-house/012",
+      "lake-house/025",
+      "lake-house/009",
+    ],
   },
   {
     slug: "kartene-i-izvozvane",

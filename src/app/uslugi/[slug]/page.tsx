@@ -9,6 +9,7 @@ import { JsonLd, breadcrumbLd } from "@/components/JsonLd";
 import { ArrowLeft, ArrowRight } from "@/components/icons";
 import { getGroup, getService, services, servicesByGroup } from "@/content/services";
 import { site } from "@/content/site";
+import { getProject, projectImage } from "@/content/projects";
 import { img } from "@/lib/img";
 import s from "./service.module.css";
 
@@ -137,6 +138,46 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           )}
         </div>
       </section>
+
+      {svc.projectPhotos && svc.projectPhotos.length > 0 && (
+        <section className="section-tight" aria-labelledby="works-title">
+          <div className="container">
+            <p className="eyebrow" data-fade>
+              <b>→</b> Проекти
+            </p>
+            <h2 id="works-title" className={s.worksTitle} data-split>
+              {svc.title} – от нашите обекти
+            </h2>
+            <ul className={s.works}>
+              {svc.projectPhotos.map((ref) => {
+                const [slug, file] = ref.split("/");
+                const project = getProject(slug);
+                if (!project) return null;
+                return (
+                  <li key={ref} data-fade>
+                    <Link href={`/proekti/${slug}`} className={s.work} transitionTypes={["curtain"]}>
+                      <span className={s.workMedia}>
+                        <Image
+                          src={img(projectImage(slug, file))}
+                          alt={`${svc.title} – ${project.title}, Варна и региона`}
+                          fill
+                          sizes="(min-width: 900px) 33vw, 50vw"
+                          placeholder="blur"
+                          className={s.workImg}
+                        />
+                      </span>
+                      <span className={s.workCaption}>
+                        <span className="mono muted">Проект</span> {project.title}
+                        <ArrowRight width={14} height={14} />
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <nav className={`container ${s.pager}`} aria-label="Съседни услуги">
         <Link href={`/uslugi/${prev.slug}`} className={s.pagerLink} transitionTypes={["curtain"]}>
