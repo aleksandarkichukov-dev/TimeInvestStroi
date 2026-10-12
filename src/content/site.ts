@@ -28,7 +28,12 @@ export const site = {
     country: "BG",
   },
   addressLine: "ул. „Васил Петлешков“ 11, офис 3А, 9010 Варна",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Варна,+ул.+Васил+Петлешков+11",
+  // Координати и работно време както в Google профила на фирмата.
+  geo: { lat: 43.2217258, lng: 27.9326061 },
+  openingHours: { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "17:00" },
+  googleMapsUrl: "https://maps.google.com/?cid=11616096700626801566",
+  // Връзка към профила на фирмата в Google Maps (с отзивите), а не само към адреса.
+  mapsUrl: "https://maps.google.com/?cid=11616096700626801566",
   chamber: {
     name: "Камарата на строителите в България",
     short: "КСБ",

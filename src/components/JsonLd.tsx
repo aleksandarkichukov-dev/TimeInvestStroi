@@ -31,13 +31,21 @@ export const organizationLd = {
     postalCode: site.address.postalCode,
     addressCountry: site.address.country,
   },
+  geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
+  hasMap: site.googleMapsUrl,
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: site.openingHours.days,
+    opens: site.openingHours.opens,
+    closes: site.openingHours.closes,
+  },
   areaServed: [
     { "@type": "City", name: "Варна" },
     { "@type": "AdministrativeArea", name: "Област Варна" },
   ],
   memberOf: { "@type": "Organization", name: site.chamber.name },
   parentOrganization: { "@type": "Organization", name: site.group.name, url: site.group.url },
-  sameAs: site.social.map((item) => item.url),
+  sameAs: [...site.social.map((item) => item.url), site.googleMapsUrl],
 };
 
 export function breadcrumbLd(items: { name: string; path: string }[]) {
