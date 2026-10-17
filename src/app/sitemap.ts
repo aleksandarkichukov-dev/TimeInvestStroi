@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("", 1, ["/img/misc/hero-lake-house.webp"]),
     page("/uslugi", 0.9),
     page("/proekti", 0.9),
+    page("/stroitelstvo-na-kashti-varna", 0.9, projects.filter((p) => p.category === "kashti").map(coverOf)),
     page("/za-nas", 0.7),
     page("/kontakti", 0.8),
     ...services.map((svc) => page(`/uslugi/${svc.slug}`, 0.8, svc.image ? [svc.image] : undefined)),

@@ -110,9 +110,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </p>
           <div className={s.nextGrid}>
             <ProjectCard project={next} aspect="16 / 9" sizes="(min-width: 900px) 60vw, 100vw" fade={false} />
-            <Link href="/proekti" className={`btn btn-ghost ${s.allBtn}`} transitionTypes={["curtain"]}>
-              Всички проекти <ArrowRight className="btn-arrow" />
-            </Link>
+            <div className={s.allLinks}>
+              {p.category === "kashti" && (
+                <Link href="/stroitelstvo-na-kashti-varna" className="btn" transitionTypes={["curtain"]}>
+                  Строителство на къщи <ArrowRight className="btn-arrow" />
+                </Link>
+              )}
+              <Link href="/proekti" className="btn btn-ghost" transitionTypes={["curtain"]}>
+                Всички проекти <ArrowRight className="btn-arrow" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -51,7 +51,10 @@
   margin-top: 32px;
 }
 
-.allBtn {
+.allLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-self: start;
 }
 

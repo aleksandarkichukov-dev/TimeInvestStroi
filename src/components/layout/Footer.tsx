@@ -33,6 +33,11 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/stroitelstvo-na-kashti-varna" className="link-underline" transitionTypes={["curtain"]}>
+                  Строителство на къщи
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

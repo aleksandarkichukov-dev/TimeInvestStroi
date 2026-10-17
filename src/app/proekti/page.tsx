@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageTransition } from "@/components/PageTransition";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { ProjectsGrid } from "@/components/projects/ProjectsGrid";
 import { Breadcrumbs, CtaBand } from "@/components/ui";
 import { JsonLd, breadcrumbLd } from "@/components/JsonLd";
+import { ArrowRight } from "@/components/icons";
 import { categories, projects } from "@/content/projects";
 import { site } from "@/content/site";
 import s from "../inner.module.css";
@@ -29,6 +31,9 @@ export default function ProjectsPage() {
             <p className="lead" data-fade>
               {site.projectsLead}
             </p>
+            <Link href="/stroitelstvo-na-kashti-varna" className="btn" data-fade transitionTypes={["curtain"]}>
+              Строителство на къщи във Варна <ArrowRight className="btn-arrow" />
+            </Link>
           </div>
         </div>
       </section>
