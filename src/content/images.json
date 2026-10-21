@@ -429,6 +429,61 @@
   "h": 768,
   "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAwAA4BaJYgCdH8AGCFCyPnngAD9U+nNdcfdq1LtfqDY5GX3qxIm4+cV+oNZ/clblm1KwH4tVSGexBhp6UJOELeJUCQZfPeQMAAA"
  },
+ "/img/projects/kashta-ezero/072.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJQBOgB4MNbh7ZiAA/ud9uXIliej1io3z45u2gb7+x3crPLzXI/esUhaWyXsL0bk7xTAWNgzcgECETHvau7c1mFrXrHx0AAA="
+ },
+ "/img/projects/kashta-ezero/073.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJQBOkCYjEws0s6AA/vUggMw50Z7Xm8q+2a+cq7gzo+U4llFCdERcsORU4E0HO1QoC9SsjwgFf3JXCvycTuAA"
+ },
+ "/img/projects/kashta-ezero/074.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJYwCdADzs4ZoAAD+6tpeGhUdtExNRKVOZ/eIoa075d/rMRNp5H9temn5hpfOOhmoDn1Nn8YIAA=="
+ },
+ "/img/projects/kashta-ezero/075.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAkAA4BaJQBOgB4g+HucQAD+34W5m9RXLjwkcLsb/1L2VzJsq5iZ366pLVsHDBOHgO/iW+rZabpRtrOWah0z0nwTKHC12eiAAA=="
+ },
+ "/img/projects/kashta-ezero/076.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAQCdASoQAAkAA4BaJQBOgB2vm1AA/ueNT16UcFE/YA3vYJxvLaYNk9/vRi/gVsws7nS05qMrrRs4tbnpN7Gltz+3tW0eHhycAAAA"
+ },
+ "/img/projects/kashta-ezero/077.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAkAA4BaJYwCdAYtzyvIcHgAAP5b7fReDnjpsu71XJvvJ0U2uBxrwfVl6mXZbqHy+6SrufpsR3uh4Hhsjwi36y458kyZRfU01ghUE2r8+mufVxzAAA=="
+ },
+ "/img/projects/kashta-ezero/078.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJZACdAC2UOoRAAD9Aol2TG27WLqoHWPQy5IF9Fb2V27ituXyhKhLaf2aL1f0KI2cSRDOjtTG7Fj+7Fshz/dQaFIdGgAA"
+ },
+ "/img/projects/kashta-ezero/079.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJZACdAC2UhmXgAD+nCfuq2li/R0c3lHNTL3o1TZIjYVDngk+CPRdzEp6IGI7xKok/9kSDr0d0Y1sIJ6xfgHmgx3CMYAA"
+ },
+ "/img/projects/kashta-ezero/080.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoQAAkAA4BaJbACdADNHdV5CYAA/ptD8KfMqj/Kx+Z9+qjva5dYFElXTgAOZ/WfYa8mNP2tV+8iWiXgVD3y1lFcVJVWWJqIjGcjXQYzTHzgnk89AmlpMAAA"
+ },
+ "/img/projects/kashta-ezero/081.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAQCdASoQAAkAA4BaJZQAAtBn8jFAAPy0OqrC+ZbMzdk/3PiMA8e9fAkTsmKhipi+Uvaplut/gc0IJKg5gAAA"
+ },
+ "/img/projects/kashta-ezero/082.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAQCdASoQAAkAA4BaJQBOgBxHCkWgAP7rHehCQmAV3+mPdNH6ZRhiTBWytm366CvyCKN5HeYmN7IQ1/mG9oqIGB0ayqja2R8kUox4m58I7dODRPU0QAAA"
+ },
  "/img/projects/kashti-kazashko/000.webp": {
   "w": 1024,
   "h": 768,
@@ -548,6 +603,41 @@
   "w": 1024,
   "h": 768,
   "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAwAA4BaJYwCdADyuJgliSgA/uf7eaoneDoyZOl2O1g3tsqYX4+AaF8JuIN/iyWeXSd+brwzKEQ5jZRXHW4aEwAAAA=="
+ },
+ "/img/projects/kashti-kazashko/070.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwAgCdASoQAAkAA4BaJYwCdH8AGBxKjnOBAAD+sjsQXlp/0X5ZRzDtsqMUal5KZmTkwyiNlK8bzUKYYh2czpRecr2mFAAA"
+ },
+ "/img/projects/kashti-kazashko/071.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJQBOgCFme8KTwAD+xym06ulXNsOTAtNJkkxQ0abQ9dHt//zEa4biMjJQ7uHsrtLdq0oM23zb6DMkbmoBkaLgRADEqqHygAA="
+ },
+ "/img/projects/kashti-kazashko/072.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJQBOgCE7ghkAAAD+WJMNjLARIiqvvG/zRu8G6rJxClCvMDhbEJE/+6mnx/1ooS9tWpKO4uiHc0FLEqV+d986x7u8ScJIAAA="
+ },
+ "/img/projects/kashti-kazashko/073.webp": {
+  "w": 2000,
+  "h": 1125,
+  "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAkAA4BaJYgCdGuAAfEnKXQAAM3e8CPFgcGYyB18d5k+0KMiAdcQJ6RHtyh9mz+ktt9sy5OfHsMHeC1qXMhRoAEJVXd3CFrUEFKCcAA="
+ },
+ "/img/projects/kashti-kazashko/074.webp": {
+  "w": 1600,
+  "h": 900,
+  "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAkAA4BaJZQC7AEOzjhzxyAA/u5UMPejQ/NskIDGczn1JZch4WS/tJ4hY+wjYSpEfg2d6ZfSiS4NaAAAAA=="
+ },
+ "/img/projects/kashti-kazashko/075.webp": {
+  "w": 1600,
+  "h": 900,
+  "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJZQCdAEO5DdNQ0AA/sX9haeYcXxTtUPzqgdMpIQJauS63iw/OcNFxxW07hexYjanuGC5jMQ9DMtRTf4JAAAA"
+ },
+ "/img/projects/kashti-kazashko/076.webp": {
+  "w": 1600,
+  "h": 900,
+  "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAkAA4BaJZwCdAEOggtXIAD+6ADdRkLKivGW+Kq9D9EtVihrmO9aH7o3wPbaO4AbGVaYPeGgDV28MAA="
  },
  "/img/projects/kashti-sotira/000a.webp": {
   "w": 1080,
