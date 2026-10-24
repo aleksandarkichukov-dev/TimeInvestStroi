@@ -1,0 +1,128 @@
+.summary {
+  display: grid;
+  gap: 20px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.score > span:last-child {
+  display: grid;
+  gap: 4px;
+}
+
+.scoreValue {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 4.5vw, 3.6rem);
+  line-height: 1;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--accent-strong);
+  font-size: 1.15rem;
+}
+
+.stars [data-off] {
+  color: var(--line-strong);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: clamp(32px, 5vw, 56px) 0 0;
+  columns: 3;
+  column-gap: clamp(12px, 1.6vw, 20px);
+}
+
+.card {
+  break-inside: avoid;
+  display: grid;
+  gap: 18px;
+  margin-bottom: clamp(12px, 1.6vw, 20px);
+  padding: clamp(22px, 2.4vw, 32px);
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 24px -16px rgb(12 27 46 / 0.25);
+}
+
+.cardStars {
+  font-size: 1rem;
+}
+
+.text {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.author > span:last-child {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.name {
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .list {
+    columns: 2;
+  }
+}
+
+/* На телефон: картите се плъзгат хоризонтално. */
+@media (max-width: 640px) {
+  .list {
+    columns: auto;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: calc(var(--gutter, 16px) * -1);
+    padding: 0 var(--gutter, 16px) 16px;
+    scrollbar-width: none;
+  }
+
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    flex: 0 0 86%;
+    margin: 0;
+    align-content: start;
+    scroll-snap-align: center;
+  }
+}

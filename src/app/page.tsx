@@ -5,11 +5,10 @@ import { Intro } from "@/components/home/Intro";
 import { Stages } from "@/components/home/Stages";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
-import { Partners } from "@/components/home/Partners";
+import { Reviews } from "@/components/home/Reviews";
 import { BeforeAfter } from "@/components/BeforeAfter";
-import { CtaBand, SectionHead } from "@/components/ui";
+import { CtaBand } from "@/components/ui";
 import { ArrowRight } from "@/components/icons";
-import { site } from "@/content/site";
 import s from "./page.module.css";
 
 export default function Home() {
@@ -44,12 +43,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-tight" aria-labelledby="partners-title">
-        <div className="container">
-          <SectionHead index="06" label="Партньори" title={<span id="partners-title">Партньори</span>} lead={site.partnersLead} />
-        </div>
-        <Partners />
-      </section>
+      <Reviews />
 
       <CtaBand />
     </PageTransition>
