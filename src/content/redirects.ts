@@ -12,6 +12,8 @@ export const legacyRedirects: Record<string, string> = {
   "/lake-house": "/proekti/lake-house",
   "/house-pool-akchelar": "/proekti/kashta-basein-akchelar",
   "/house_kazashko": "/proekti/kashta-ezero",
+  // „Вила Ричмънд“ от стария сайт: няма такъв проект на новия сайт.
+  "/richmond": "/proekti",
   "/къщи-казашко": "/proekti/kashti-kazashko",
   "/house-aksakovo": "/proekti/kashta-aksakovo",
   "/house-alenmak": "/proekti/kashta-alen-mak",
